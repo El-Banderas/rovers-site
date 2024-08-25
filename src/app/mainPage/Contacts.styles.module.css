@@ -1,0 +1,17 @@
+.contacts {
+    height: 60%;
+
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 2, 71, 1) 35%, rgba(62, 88, 153, 1) 100%);
+    color: whitesmoke;
+}
+
+.content{
+
+ display: flex;
+ justify-content: flex-start;
+ flex-direction: column;
+ margin-left: 5%;
+ margin-right: 5%;
+
+}
