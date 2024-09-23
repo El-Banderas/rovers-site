@@ -34,14 +34,13 @@ jobs:
         with:
           static_site_generator: next
 
+      - name: PNPM install?
+        run: pnpm install
       - name: Build with Next.js 🏗️
         run: pnpm next build
       - name: Debug
         run: |
           ls -la
-
-      - name: Maybe fix?
-        uses: actions/checkout@v2
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
