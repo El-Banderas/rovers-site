@@ -15,7 +15,7 @@ export default function Page() {
     <h1 className={styles.title} >News Page</h1>
     <div className={styles.columnNews}>
       {
-        news.map((oneNew) => (<NewCard id={oneNew.id} title={oneNew.title} summary={oneNew.summary}/>))
+        news.map((oneNew) => (<NewCard id={oneNew.id} key={oneNew.id} title={oneNew.title} summary={oneNew.summary}/>))
       }
     </div>
 
