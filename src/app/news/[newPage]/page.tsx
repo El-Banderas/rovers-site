@@ -5,6 +5,10 @@ import styles from './styles.module.css'
 import Image from 'next/image'
 import rocket from '/public/rocket.jpeg'
 
+export async function generateStaticParams() {
+  return [{newPage : "1"}]
+}
+
 export default function Page ({params: {newPage}}: { params: { newPage: string } }) {
 
 const thisNew = news.find(p => p.id.toString() === newPage)
