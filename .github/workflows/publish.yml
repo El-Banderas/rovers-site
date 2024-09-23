@@ -40,7 +40,7 @@ jobs:
         run: pnpm next build
       - name: Debug
         run: |
-          ls -la
+          ls 
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
