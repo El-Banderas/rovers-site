@@ -40,6 +40,9 @@ jobs:
         run: |
           ls -la
 
+      - name: Maybe fix?
+        uses: actions/checkout@v2
+
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
