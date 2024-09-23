@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/rovers-site",
+
   output: 'export',
+    basePath: "/rovers-site",
   reactStrictMode: true,
 async redirects() {
   return [
