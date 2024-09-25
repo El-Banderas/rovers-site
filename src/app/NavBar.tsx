@@ -1,29 +1,55 @@
 'use client'
+import * as React from 'react';
 
 import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import AdbIcon from '@mui/icons-material/Adb';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 
 import Image from 'next/image'
 import logo from '../../public/NameBlack.png'
-import styles from './styles.module.css'
+import styles from '@/app/styles.module.css'
 
 import { useRouter } from 'next/navigation'
-import { PaddingOutlined } from '@mui/icons-material';
-import { red } from '@mui/material/colors';
+import CssBaseline from '@mui/material/CssBaseline';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Slide from '@mui/material/Slide';
 
 const pages = ['About us', 'News', 'Sponsors', 'Projects', 'Contacts'];
 
-export default function NavBar() {
+interface Props {
+  window?: () => Window;
+  children?: React.ReactElement<any>;
+}
+
+function HideOnScroll(props: Props) {
+  const { children, window } = props;
+
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+
+  });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children ?? <div />}
+    </Slide>
+  );
+}
+
+
+
+
+export default function NavBar(props: Props) {
+
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const router = useRouter()
 
@@ -47,10 +73,13 @@ export default function NavBar() {
     setAnchorElNav(null);
   };
 
-  return <AppBar position="static" className={styles.navbar} >
-    <Container disableGutters maxWidth="xl" >
-      <Toolbar disableGutters>
-        <Image
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <HideOnScroll {...props}>
+        <AppBar className={styles.navbar} >
+          <Toolbar>
+          <Image
           src={logo}
           style={{
             width: '10%',
@@ -66,8 +95,7 @@ export default function NavBar() {
               onClick={() => router.push("/")}
         />
 
-          {/* When is on a phone */}
-        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },  justifyContent: 'flex-end' }}>
+<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },  justifyContent: 'flex-end' }}>
           <IconButton
             size="large"
             aria-label="account of current user"
@@ -110,8 +138,7 @@ export default function NavBar() {
 
           ))}
         </Menu>
-          {/* When is on a computer */}
-        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page) => (
             <Button
               key={page}
@@ -122,8 +149,11 @@ export default function NavBar() {
             </Button>
           ))}
         </Box>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
+      
+    </React.Fragment>
+  );
 
-      </Toolbar>
-    </Container>
-  </AppBar>;
 }

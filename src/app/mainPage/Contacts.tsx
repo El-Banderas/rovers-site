@@ -5,6 +5,7 @@ import styles from "./Contacts.styles.module.css";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
+import contactUs from '/public/Contact.png'
 import { useRouter } from 'next/navigation'
 
 export default function Contacts() {
@@ -15,7 +16,7 @@ export default function Contacts() {
             <h1>Do you have any questions?<br />Contact us</h1>
             <div className={styles.flexHorizontal}>
                 <Image
-                    src="/Contact.png"
+                    src={contactUs}
                     alt="Contact us"
                     width={600}
                     height={400}

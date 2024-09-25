@@ -3,6 +3,7 @@ import MyButton from "../CommonComponents/MyButton/MyButton";
 import styles from "./AboutUs.styles.module.css";
 import Image from "next/image";
 
+import abousUsImg from '/public/aboutUsIMG.jpg'
 import { useRouter } from 'next/navigation'
 
 export default function AboutUs() {
@@ -18,7 +19,7 @@ export default function AboutUs() {
         </div>
       </div>
       <Image
-        src="/aboutUsIMG.jpg"
+        src={abousUsImg}
         alt="About us img"
         width={500}
         height={500}

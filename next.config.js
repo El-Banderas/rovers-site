@@ -3,6 +3,7 @@ const nextConfig = {
 
   output: 'export',
     basePath: "/rovers-site",
+    images: { unoptimized: true } ,
   reactStrictMode: true,
 async redirects() {
   return [
