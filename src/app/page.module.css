@@ -1,3 +1,11 @@
 .main {
  min-height: 100vh;
 }
+.vercelLogo{
+    height: 100vh;
+}
+@media (max-width: 768px), (max-height: 500px) { 
+            .vercelLogo { 
+                height: 30vh;
+            }
+            }

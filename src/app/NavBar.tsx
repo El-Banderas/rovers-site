@@ -77,7 +77,7 @@ export default function NavBar(props: Props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar className={styles.navbar} >
+        <AppBar className={styles.navbar} color="transparent" sx={{backdropFilter:"blur(3px)"}}>
           <Toolbar>
           <Image
           src={logo}

@@ -15,10 +15,10 @@ export default function Home() {
               className={styles.vercelLogo}
               width={0}
   height={0}
-  sizes="100vw"
-  style={{ width: '100%', height: '100vh' }} // optional
+  style={{ width: '99vw'}} // optional
               priority
             />
+
             <AboutUs />
             <Contacts />
    </main>
