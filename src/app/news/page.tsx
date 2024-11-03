@@ -11,7 +11,7 @@ const news1 = [{title: "New 1", summary: "Lorem ipsum dolor sit amet, consectetu
 export default function Page() {
     
 
-  return <div>
+  return <div className={styles.content}>
     <h1 className={styles.title} >News Page</h1>
     <div className={styles.columnNews}>
       {

@@ -1,0 +1,27 @@
+.img{
+    position: relative;
+}
+.vercelLogo{
+    width: 100%;
+    height: auto;
+
+}
+@media (max-width: 768px), (max-height: 500px) { 
+            .vercelLogo { 
+                height: 30vh;
+            }
+            }
+.title{
+      position: absolute;
+  top: 50%;
+  left: 5%;
+  color: white;
+  font-size:3.2rem;
+}
+.description{
+      position: absolute;
+  top: 70%;
+  left: 5%;
+  right: 30%;
+  color: white;
+}
