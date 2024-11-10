@@ -5,19 +5,12 @@ import Contacts from "./mainPage/Contacts";
 
 
 import roverLandPage from '/public/roverLandPage.jpg'
+import ImageWText from "./CommonComponents/ImageWText/ImageWText";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-<Image
-              src={roverLandPage}
-              alt="Rover img"
-              className={styles.vercelLogo}
-              width={0}
-  height={0}
-  style={{ width: '99vw'}} // optional
-              priority
-            />
+      <ImageWText image={roverLandPage} title="Where Strenght meets the stars" />
 
             <AboutUs />
             <Contacts />

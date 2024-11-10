@@ -12,8 +12,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 
 import Image from 'next/image'
-import logo from '../../public/NameBlack.png'
-import styles from '@/app/styles.module.css'
+import logo from '../../../../public/NameBlack.png'
+import styles from '@/app/CommonComponents/Navbar/styles.module.css'
 
 import { useRouter } from 'next/navigation'
 import CssBaseline from '@mui/material/CssBaseline';
@@ -59,6 +59,8 @@ export default function NavBar(props: Props) {
         return "/news";
       case pageName.includes('Projects'):
         return "/projects";
+      case pageName.includes('About us'):
+        return "/about-us";
       default:
         return "/news"
 

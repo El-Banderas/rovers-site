@@ -23,6 +23,7 @@ export default function AboutUs() {
         alt="About us img"
         width={500}
         height={500}
+        className={styles.imgAboutUs}
       />
 
     </div>

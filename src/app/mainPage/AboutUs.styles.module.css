@@ -1,22 +1,35 @@
-.page{
+.page {
     height: 60%;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 2%;
 }
 
-.aboutUsContent{
+.aboutUsContent {
     display: flex;
     justify-content: space-between;
 }
 
-.text{
+.text {
     width: 60%;
 }
 
-.buttonCenter{
- display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10%;
+.buttonCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.imgAboutUs {
+    width: 30%;
+    height: auto;
+}
+
+@media (max-width: 768px),
+(max-height: 500px) {
+    .imgAboutUs {
+        height: 25vh;
+        width: auto;
+    }
 }

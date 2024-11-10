@@ -20,6 +20,7 @@ export default function Contacts() {
                     alt="Contact us"
                     width={600}
                     height={400}
+                    className={styles.imgContactUs}
                 />
                 <div className={styles.contactsColumn}>
                     <div>
