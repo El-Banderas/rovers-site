@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { ReactFlow, useNodesState, useEdgesState } from '@xyflow/react';
+import styles from "./styles.module.css";
 
 import '@xyflow/react/dist/style.css';
 
@@ -14,9 +15,9 @@ const initialNodes = [
 
 const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }];
 
-console.log("AQUI!!!")
 
-  return <div style={{ height: 300 ,width: 300 }}>
+  return <div className={styles.graphContainer}>
+  <div style={{ height: 300 ,width: 300 }}>
  <ReactFlow
       nodes={initialNodes}
       edges={initialEdges}
@@ -27,5 +28,5 @@ console.log("AQUI!!!")
       fitViewOptions={{ padding: 0.5 }}
     ></ReactFlow>
 
-   </div>;
+   </div></div>;
 }

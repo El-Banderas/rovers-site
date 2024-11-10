@@ -13,15 +13,17 @@ export default function Footer() {
 
   return (
     <div className={styles.footer}>
-      <div className={styles.aboveHorizontalLine}>
-        <div className={styles.verticalFlex}>
-          <Image
+      <Image
             src={whiteLogo}
             alt="Logo"
             width={600}
             height={400}
             className={styles.imgWhiteLogo}
           />
+      <div className={styles.aboveHorizontalLine}>
+          
+
+        <div className={styles.verticalFlex}>
           <h1>TaurusSpace</h1>
           <p>Where Strenght meets the stars</p>
         </div>
