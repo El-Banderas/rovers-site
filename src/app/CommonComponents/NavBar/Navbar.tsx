@@ -13,7 +13,7 @@ import Menu from '@mui/material/Menu';
 
 import Image from 'next/image'
 import logo from '../../../../public/NameBlack.png'
-import styles from '@/app/CommonComponents/Navbar/styles.module.css'
+import styles from './styles.module.css'
 
 import { useRouter } from 'next/navigation'
 import CssBaseline from '@mui/material/CssBaseline';
