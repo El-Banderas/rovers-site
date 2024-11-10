@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <div className={styles.footer}>
-      <div className={styles.horizontalFlex}>
+      <div className={styles.aboveHorizontalLine}>
         <div className={styles.verticalFlex}>
           <Image
             src={whiteLogo}

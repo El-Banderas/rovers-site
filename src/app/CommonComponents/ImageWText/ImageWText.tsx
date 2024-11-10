@@ -6,7 +6,7 @@ import rocket from '/public/rocket.jpeg'
 import { useRouter } from 'next/navigation'
 
 interface ImageWTextProps {
-    image: typeof Image,
+    image: any,
     title: string,
     description?: string
 }
