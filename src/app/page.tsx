@@ -1,11 +1,22 @@
 import Image from "next/image";
+import { Metadata } from 'next';
 import styles from "./page.module.css";
 import AboutUs from "./mainPage/AboutUs";
 import Contacts from "./mainPage/Contacts";
 
-
 import roverLandPage from '/public/roverLandPage.jpg'
 import ImageWText from "./CommonComponents/ImageWText/ImageWText";
+
+export const metadata: Metadata = {
+  title: 'Taurus Space',
+  description:
+    'Where Strenght meets the stars',
+    icons: {
+    // https://stackoverflow.com/questions/75674866/adding-favicon-to-nextjs-app-router-application
+    icon: '../public/whiteGoldenLogo.jpg',
+  },
+};
+
 
 export default function Home() {
   return (
