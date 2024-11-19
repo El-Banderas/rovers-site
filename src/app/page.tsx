@@ -11,10 +11,6 @@ export const metadata: Metadata = {
   title: 'Taurus Space',
   description:
     'Where Strenght meets the stars',
-    icons: {
-    // https://stackoverflow.com/questions/75674866/adding-favicon-to-nextjs-app-router-application
-    icon: '../public/whiteGoldenLogo.jpg',
-  },
 };
 
 
