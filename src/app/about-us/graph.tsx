@@ -10,9 +10,9 @@ export default function Graph () {
   const router = useRouter()
 const initialNodes = [
   { id: '1', data: { label: 'Pessoa 1' }, position: { x: 100, y: 100 } },
-  { id: '2', data: { label: 'Departamento 1' }, position: { x: 0, y: 200 } },
-  { id: '3', data: { label: 'Departamento 2' }, position: { x: 200, y: 200 } },
-  { id: '4', data: { label: 'Departamento 3' }, position: { x: 150, y: 200 } },
+  { id: '2', data: { label: 'Departamento 1' }, position: { x: -50, y: 200 } },
+  { id: '3', data: { label: 'Departamento 2' }, position: { x: 250, y: 200 } },
+  { id: '4', data: { label: 'Departamento 3' }, position: { x: 100, y: 200 } },
 ];
 
 const initialEdges = [
@@ -22,8 +22,8 @@ const initialEdges = [
 ];
 
 const disabled = true
-  return <div className={styles.graphContainer}>
-  <div className={styles.graphContainer}  style={{ height: 300 ,width: 300 }}>
+  return <div className={styles.graphZone}>
+  <div className={styles.graphContainer}  style={{ height: 400 ,width: 300 }}>
  <ReactFlow
       nodes={initialNodes}
       edges={initialEdges}

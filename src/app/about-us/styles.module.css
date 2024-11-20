@@ -1,36 +1,55 @@
-.img{
+.img {
     position: relative;
 }
-.vercelLogo{
+
+.vercelLogo {
     width: 100%;
     height: auto;
 
 }
-@media (max-width: 768px), (max-height: 500px) { 
-            .vercelLogo { 
-                height: 30vh;
-            }
-            }
-.title{
-      position: absolute;
-  top: 50%;
-  bottom: 50%;
-  left: 5%;
-  color: white;
-  font-size:3.2rem;
-}
-.description{
-      position: absolute;
-  top: 60%;
-  bottom: 40%;
-  left: 5%;
-  color: white;
+
+@media (max-width: 768px),
+(max-height: 500px) {
+    .vercelLogo {
+        height: 30vh;
+    }
 }
 
+.title {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 5%;
+    color: white;
+    font-size: 3.2rem;
+}
+
+.description {
+    position: absolute;
+    top: 60%;
+    bottom: 40%;
+    left: 5%;
+    color: white;
+}
 
 
-.graphContainer{
-    background-color: white;
+
+.graphZone {
     width: 50%;
-  margin: 0 auto;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.graphContainer {
+    background-color: white;
+    height: 50%;
+    min-width: 100%;
+}
+
+@media (max-width: 768px),
+(max-height: 500px) {
+    .graphZone {
+        width: auto;
+        margin: 0;
+    }
 }
