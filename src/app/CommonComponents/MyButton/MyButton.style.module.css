@@ -1,9 +1,12 @@
 
 
 .button{
-  background-color: red;
+  background-color: rgb(250, 61, 61);
   color: white;
   font-weight: bold;
-  border-color: red;
   padding: 1% 4% 1% 4%;
 }
+
+.button:hover {
+  background-color: red;
+} 

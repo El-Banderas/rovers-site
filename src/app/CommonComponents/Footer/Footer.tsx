@@ -3,7 +3,7 @@ import * as React from 'react';
 import Image from "next/image";
 import { useRouter } from 'next/navigation'
 import styles from "./Footer.styles.module.css";
-import whiteLogo from '/public/whiteGoldenLogo.jpg'
+import whiteLogo from '/public/Icon_logo_azul_dourado.png'
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -16,16 +16,16 @@ export default function Footer() {
       <Image
             src={whiteLogo}
             alt="Logo"
-            width={600}
-            height={400}
+            width={700}
+            height={500}
             className={styles.imgWhiteLogo}
           />
       <div className={styles.aboveHorizontalLine}>
           
 
         <div className={styles.verticalFlex}>
-          <h1>TaurusSpace</h1>
-          <p>Where Strenght meets the stars</p>
+          <h1 className={styles.lessVerticalPadding}>TaurusSpace</h1>
+          <p className={styles.lessVerticalPadding}>Where Strenght meets the stars</p>
         </div>
 
         <div className={styles.verticalFlex}>
