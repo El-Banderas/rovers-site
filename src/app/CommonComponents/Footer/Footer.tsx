@@ -24,7 +24,7 @@ export default function Footer() {
           
 
         <div className={styles.verticalFlex}>
-          <h1 className={styles.lessVerticalPadding}>TaurusSpace</h1>
+          <h1 className={styles.lessVerticalPadding}>Taurus Space</h1>
           <p className={styles.lessVerticalPadding}>Where Strenght meets the stars</p>
         </div>
 
