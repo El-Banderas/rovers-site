@@ -24,10 +24,10 @@ export default function Contacts() {
                 />
                 <div className={styles.contactsColumn}>
                     <div>
-                        Phone<br />999 999 999
+                        Phone<br />912 594 206
                     </div>
                     <div>
-                        Mail<br />hello@reallygreatsite.com
+                        Mail<br />taurusspaceprojects@gmail.com
                     </div>
                     <div></div>
                     <div>Social</div>

@@ -25,15 +25,15 @@ export default function Footer() {
 
         <div className={styles.verticalFlex}>
           <h1 className={styles.lessVerticalPadding}>Taurus Space</h1>
-          <p className={styles.lessVerticalPadding}>Where Strenght meets the stars</p>
+          <p className={styles.lessVerticalPadding}>Where Strength meets the stars</p>
         </div>
 
-        <div className={styles.verticalFlex}>
+        <div className={styles.verticalFlexCenter}>
           <h4 className={styles.othersLinks} onClick={() => router.push("/")}>Home</h4>
           <h4 className={styles.othersLinks} onClick={() => router.push("/about-us")}>About us</h4>
           <h4 className={styles.othersLinks} onClick={() => router.push("/contacts")}>Contacts</h4>
         </div>
-        <div className={styles.verticalFlex}>
+        <div className={styles.verticalFlexRight}>
           <h4>Follow Taurus Space</h4>
           <div className={styles.horizontalFlex}>
           <div onClick={() => router.push("/instagram")} style={{ cursor: 'pointer' }}>

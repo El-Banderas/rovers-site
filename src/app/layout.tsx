@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Taurus Space",
-  description: "Where Strenght meets the stars",
+  description: "Where Strength meets the stars",
 };
 
 export default function RootLayout({

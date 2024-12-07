@@ -11,7 +11,7 @@ import ImageWText from "./CommonComponents/ImageWText/ImageWText";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <ImageWText image={roverLandPage} title="Where Strenght meets the stars" />
+      <ImageWText image={roverLandPage} title="Where Strength meets the stars" />
 
             <AboutUs />
             <Contacts />

@@ -14,7 +14,7 @@ async redirects() {
     },
     {
       source: '/linkedin',
-      destination: 'https://www.youtube.com/watch?v=xvFZjo5PgG0',
+      destination: 'https://www.linkedin.com/company/taurus-space/',
       permanent: false,
       basePath: false
     },

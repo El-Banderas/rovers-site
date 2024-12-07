@@ -26,7 +26,19 @@ justify-content: space-between;
 .verticalFlex{
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    flex-basis: 100%;
+}
+.verticalFlexCenter{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
+}
+.verticalFlexRight{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: flex-end;
 }
 .lessVerticalPadding{
     margin-top: 0px;

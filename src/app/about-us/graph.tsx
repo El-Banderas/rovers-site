@@ -21,10 +21,15 @@ const initialEdges = [
   { id: 'e1-4', source: '1', target: '4' },
 ];
 
+const styles = {
+  background: 'whitesmoke',
+  width: '300%'
+};
+
 const disabled = true
-  return <div className={styles.graphZone}>
-  <div className={styles.graphContainer}  style={{ height: 400 ,width: 300 }}>
+  return <div style={{ height: 400 ,width: '100%' }} className={styles.graph} >
  <ReactFlow
+      style={styles}
       nodes={initialNodes}
       edges={initialEdges}
       attributionPosition="bottom-left"
@@ -42,5 +47,5 @@ const disabled = true
   maxZoom={disabled ? 1 : 3}
     ></ReactFlow>
 
-   </div></div>;
+   </div>;
 }
