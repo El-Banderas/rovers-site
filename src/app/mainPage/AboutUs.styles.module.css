@@ -48,4 +48,9 @@
         height: 25vh;
         width: auto;
     }
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
 }

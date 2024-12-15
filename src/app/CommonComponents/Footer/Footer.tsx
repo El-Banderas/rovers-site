@@ -36,10 +36,10 @@ export default function Footer() {
         <div className={styles.verticalFlexRight}>
           <h4>Follow Taurus Space</h4>
           <div className={styles.horizontalFlex}>
-          <div onClick={() => window.location.replace("https://www.instagram.com/taurusspaceprojects/")} style={{ cursor: 'pointer' }}>
+          <div onClick={() => window.location.replace("https://www.linkedin.com/company/taurus-space/")} style={{ cursor: 'pointer' }}>
             <LinkedInIcon />
           </div>
-          <div onClick={() => window.location.replace("https://www.linkedin.com/company/taurus-space/")} style={{ cursor: 'pointer' }}>
+          <div onClick={() => window.location.replace("https://www.instagram.com/taurusspaceprojects/")} style={{ cursor: 'pointer' }}>
             <InstagramIcon />
           </div>
  
