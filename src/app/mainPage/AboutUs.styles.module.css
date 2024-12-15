@@ -4,7 +4,15 @@
     padding-right: 5%;
     padding-bottom: 2%;
     background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+
 }
+
+.textPart {
+    flex-grow: 3;
+}
+
 
 .aboutUsContent {
     display: flex;
@@ -15,6 +23,11 @@
     width: 60%;
 }
 
+.title {
+    width: fit-content;
+    padding-top: 0px;
+    margin-top: 0px;
+}
 .buttonCenter {
     display: flex;
     align-items: center;
@@ -23,8 +36,9 @@
 }
 
 .imgAboutUs {
-    width: 30%;
+    width: 20%;
     height: auto;
+    flex-grow: 1;
 }
 
 @media (max-width: 768px),

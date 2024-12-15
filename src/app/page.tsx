@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import AboutUs from "./mainPage/AboutUs";
 import Contacts from "./mainPage/Contacts";
 
-import roverLandPage from '/public/roverLandPage.jpg'
+import mainPage from '/public/MainPage.jpg'
 import ImageWText from "./CommonComponents/ImageWText/ImageWText";
 
 
@@ -11,7 +11,7 @@ import ImageWText from "./CommonComponents/ImageWText/ImageWText";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <ImageWText image={roverLandPage} title="Where Strength meets the stars" />
+      <ImageWText image={mainPage} title="Where Strength meets the stars" />
 
             <AboutUs />
             <Contacts />

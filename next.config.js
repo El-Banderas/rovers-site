@@ -2,24 +2,24 @@
 const nextConfig = {
 
   output: 'export',
-    basePath: "/rovers-site",
-    images: { unoptimized: true } ,
+  basePath: "/rovers-site",
+  images: { unoptimized: true },
   reactStrictMode: true,
-async redirects() {
-  return [
-    {
-      source: '/instagram',
-      destination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-      permanent: false,
-      basePath: false
-    },
-    {
-      source: '/linkedin',
-      destination: 'https://www.linkedin.com/company/taurus-space/',
-      permanent: false,
-      basePath: false
-    },
-  ]
-}
+  async redirects() {
+    return [
+      {
+        source: '/rovers-site/instagram',
+        destination: 'https://www.instagram.com/taurusspaceprojects/',
+        permanent: false,
+        basePath: false
+      },
+      {
+        source: '/rovers-site/linkedin',
+        destination: 'https://www.linkedin.com/company/taurus-space/',
+        permanent: false,
+        basePath: false
+      },
+    ]
+  }
 };
 module.exports = nextConfig
