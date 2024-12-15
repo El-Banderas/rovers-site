@@ -1,28 +1,42 @@
-.img{
+.img {
     position: relative;
 }
+
 .vercelLogo{
     width: 100%;
     height: auto;
+}
 
+
+.title {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 5%;
+    color: white;
+    font-size: 4.0rem;
 }
-@media (max-width: 768px), (max-height: 500px) { 
-            .vercelLogo { 
-                height: 30vh;
-            }
-            }
-.title{
-      position: absolute;
-  top: 50%;
-  bottom: 50%;
-  left: 5%;
-  color: white;
-  font-size:4.0rem;
+
+.description {
+    position: absolute;
+    top: 60%;
+    bottom: 40%;
+    left: 5%;
+    color: white;
 }
-.description{
-      position: absolute;
-  top: 60%;
-  bottom: 40%;
-  left: 5%;
-  color: white;
+@media (max-width: 768px),
+(max-height: 500px) {
+    .vercelLogo {
+        height: 30vh;
+        width: 100%;
+    }
+
+    .title {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 5%;
+        color: white;
+        font-size: 1.3rem;
+    }
 }

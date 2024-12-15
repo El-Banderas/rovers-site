@@ -27,7 +27,7 @@ const styles = {
 };
 
 const disabled = true
-  return <div style={{ height: 400 ,width: '100%' }} className={styles.graph} >
+  return <div style={{ height: 400 ,width: '100%' }}  >
  <ReactFlow
       style={styles}
       nodes={initialNodes}

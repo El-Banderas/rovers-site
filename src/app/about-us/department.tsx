@@ -1,5 +1,5 @@
 'use client'
-import styles from "./Department.styles.module.css";
+import styles from "./department.styles.module.css";
 import Image from "next/image";
 
 import photo from '/public/whiteGoldenLogo.jpg'
