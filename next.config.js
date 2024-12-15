@@ -8,13 +8,13 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/rovers-site/instagram',
+        source: '/instagram',
         destination: 'https://www.instagram.com/taurusspaceprojects/',
         permanent: false,
         basePath: false
       },
       {
-        source: '/rovers-site/linkedin',
+        source: '/linkedin',
         destination: 'https://www.linkedin.com/company/taurus-space/',
         permanent: false,
         basePath: false
