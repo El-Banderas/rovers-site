@@ -8,17 +8,21 @@ import '@xyflow/react/dist/style.css';
 
 export default function Graph () {
   const router = useRouter()
+  const baseX = 100
+  const shift = 150
 const initialNodes = [
-  { id: '1', data: { label: 'Pessoa 1' }, position: { x: 100, y: 100 } },
-  { id: '2', data: { label: 'Departamento 1' }, position: { x: -50, y: 200 } },
-  { id: '3', data: { label: 'Departamento 2' }, position: { x: 250, y: 200 } },
-  { id: '4', data: { label: 'Departamento 3' }, position: { x: 100, y: 200 } },
+  { id: '1', data: { label: 'Leaders' }, position: { x: 100, y: 100 } },
+  { id: '2', data: { label: 'Mechanics' }, position: { x: baseX + 0.75 * shift, y: 200 } },
+  { id: '3', data: { label: 'Electronics' }, position: { x: baseX + 2*shift, y: 200 } },
+  { id: '4', data: { label: 'Software' }, position: { x: baseX - 0.75 * shift, y: 200 } },
+  { id: '5', data: { label: 'Business' }, position: { x: baseX - 2*shift, y: 200 } },
 ];
 
 const initialEdges = [
   { id: 'e1-2', source: '1', target: '2' },
   { id: 'e1-3', source: '1', target: '3' },
   { id: 'e1-4', source: '1', target: '4' },
+  { id: 'e1-5', source: '1', target: '5' },
 ];
 
 const styles = {

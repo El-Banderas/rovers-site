@@ -1,3 +1,40 @@
 .imgLeader{
     background-color: red;
 }
+
+.content{
+    margin: 0% 4% 1% 4%;
+}
+
+.firstRow{
+    display: flex;
+    flex-direction: row;
+}
+.personDescription{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    width: 20%;
+}
+.headName{
+    margin-top: 0;
+}
+.subtitle{
+    font-weight: light;
+}
+.description{
+    padding-left: 5%;
+}
+
+@media (max-width: 768px),
+(max-height: 500px) {
+
+.firstRow{
+    flex-direction: column;
+}
+
+.imgLeader{
+    background-color: red;
+     align-self:center;
+}
+}
