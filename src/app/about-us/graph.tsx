@@ -29,6 +29,7 @@ const styles = {
   background: 'whitesmoke',
   width: '300%'
 };
+const proOptions = { hideAttribution: true };
 
 const disabled = true
   return <div style={{ height: 400 ,width: '100%' }}  >
@@ -44,6 +45,7 @@ const disabled = true
   nodesFocusable={!disabled}
   draggable={!disabled}
   panOnDrag={!disabled}
+        proOptions={proOptions}
   
   // Optional if you also want to lock zooming
   zoomOnDoubleClick={!disabled}

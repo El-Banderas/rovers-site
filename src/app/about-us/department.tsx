@@ -5,8 +5,13 @@ import Image from "next/image";
 import photo from '/public/Person.jpg'
 import { useRouter } from 'next/navigation'
 
-export default function Department() {
+export default function Department({ responsabilities }: { responsabilities : string[] }) {
   const router = useRouter()
+
+  const listReponsabilities = responsabilities.map(point =>
+    <li>{point}</li>
+  );
+
   return <div className={styles.content}>
     <h1 className="">Department of Mechanical</h1>
     <div className={styles.firstRow}>
@@ -22,7 +27,7 @@ export default function Department() {
         <p className={styles.subtitle}>Department Coordinator</p>
       </div>
       <div className={styles.description}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+      <ul>{listReponsabilities}</ul>
       </div>
     </div>
 
