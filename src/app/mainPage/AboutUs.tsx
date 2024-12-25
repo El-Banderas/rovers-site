@@ -3,7 +3,7 @@ import MyButton from "../CommonComponents/MyButton/MyButton";
 import styles from "./AboutUs.styles.module.css";
 import Image from "next/image";
 
-import abousUsImg from '/public/AboutUsIMG.jpg'
+import abousUsImg from '/public/aboutUsIMG.jpg'
 import { useRouter } from 'next/navigation'
 
 export default function AboutUs() {
