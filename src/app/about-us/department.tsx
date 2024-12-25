@@ -4,30 +4,34 @@ import Image from "next/image";
 
 import photo from '/public/Person.jpg'
 import { useRouter } from 'next/navigation'
-
-export default function Department({ responsabilities }: { responsabilities : string[] }) {
+import {Person} from './data'
+export default function Department({title, responsabilities, people }: { title : string, responsabilities : string[], people : Person[] }) {
   const router = useRouter()
 
   const listReponsabilities = responsabilities.map(point =>
     <li>{point}</li>
   );
 
+  const director = people[0]
+  const others = people.slice(1)
   return <div className={styles.content}>
-    <h1 className="">Department of Mechanical</h1>
+    <h1 className="">{title}</h1>
     <div className={styles.firstRow}>
       <Image
-        src={photo}
+        src={director.photo}
         alt="Leader"
         width={200}
         height={354}
         className={styles.imgLeader}
       />
       <div className={styles.personDescription}>
-        <h2 className={styles.headName}>Manuel dos Santos</h2>
+        <h2 className={styles.headName}>{director.name}</h2>
         <p className={styles.subtitle}>Department Coordinator</p>
       </div>
       <div className={styles.description}>
-      <ul>{listReponsabilities}</ul>
+        <ul>
+{listReponsabilities}
+</ul>
       </div>
     </div>
 
