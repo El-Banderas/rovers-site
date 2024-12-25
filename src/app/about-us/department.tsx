@@ -9,7 +9,7 @@ export default function Department({title, responsabilities, people }: { title :
   const router = useRouter()
 
   const listReponsabilities = responsabilities.map(point =>
-    <li>{point}</li>
+    <li key={point}>{point}</li>
   );
 
   const director = people[0]

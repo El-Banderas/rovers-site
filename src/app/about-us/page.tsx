@@ -18,7 +18,7 @@ export default function Home() {
     <Graph/>
     {departments.map(department =>  
 
-    <Department title={department.title} responsabilities={department.responsabilities} people={department.people}/>
+    <Department key={department.title} title={department.title} responsabilities={department.responsabilities} people={department.people}/>
     )}
    </main>
   );
