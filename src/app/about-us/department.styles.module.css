@@ -26,6 +26,19 @@
     padding-left: 5%;
 }
 
+.persons{
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+}
+
+.person{
+    display: flex;
+    flex-direction: column;
+
+      flex: 1 1 0;
+  width: 0;
+}
 @media (max-width: 768px),
 (max-height: 500px) {
 
@@ -36,5 +49,9 @@
 .imgLeader{
     background-color: red;
      align-self:center;
+}
+
+.persons{
+    flex-direction: column;
 }
 }
