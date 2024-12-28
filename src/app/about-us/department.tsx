@@ -13,7 +13,7 @@ export default function Department({title, responsabilities, people }: { title :
   );
 
   const persons = people.map(person =>
-    <div className={styles.person}>
+    <div className={styles.person} key={person.name}>
      <Image
         src={person.photo}
         alt={person.name}
@@ -26,7 +26,8 @@ export default function Department({title, responsabilities, people }: { title :
   );
   const director = people[0]
   const others = people.slice(1)
-  return <div className={styles.content}>
+  return <section id={title}>
+   <div className={styles.content}>
     <h1 className="">{title}</h1>
     <div className={styles.firstRow}>
       <Image
@@ -50,5 +51,7 @@ export default function Department({title, responsabilities, people }: { title :
       <div className={styles.persons}>
       {persons}
       </div>
-  </div>;
+  </div>
+  </section>
+  ;
 }

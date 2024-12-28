@@ -1,13 +1,15 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import React, { useState, useCallback } from 'react';
 import { ReactFlow, useNodesState, useEdgesState } from '@xyflow/react';
 import styles from "./styles.module.css";
 
 import '@xyflow/react/dist/style.css';
 
 export default function Graph () {
-  const router = useRouter()
+    const { push } = useRouter();
+
   const baseX = 100
   const shift = 150
 const initialNodes = [
@@ -31,6 +33,10 @@ const styles = {
 };
 const proOptions = { hideAttribution: true };
 
+const onNodeClick = (event : EventTarget , node : any) => {console.log('click node', node.data.label); 
+   push(`#${node.data.label}%20Department`);
+};
+
 const disabled = true
   return <div style={{ height: 400 ,width: '100%' }}  >
  <ReactFlow
@@ -46,6 +52,7 @@ const disabled = true
   draggable={!disabled}
   panOnDrag={!disabled}
         proOptions={proOptions}
+              onNodeClick={ onNodeClick }
   
   // Optional if you also want to lock zooming
   zoomOnDoubleClick={!disabled}

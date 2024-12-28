@@ -9,6 +9,7 @@
 .firstRow{
     display: flex;
     flex-direction: row;
+    padding-bottom: 5%;
 }
 .personDescription{
     display: flex;
@@ -29,15 +30,20 @@
 .persons{
     display: flex;
     flex-direction: row;
+    align-content: space-around;
+    justify-content: space-around;
     padding: 3%;
+    gap: 3%;
+    row-gap: 30px;
+    flex-wrap: wrap;
 }
 
 .person{
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    background-color: blue;
 
-      flex: 1 1 0;
-  width: 0;
 }
 @media (max-width: 768px),
 (max-height: 500px) {
