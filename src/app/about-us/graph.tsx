@@ -33,7 +33,7 @@ const styles = {
 };
 const proOptions = { hideAttribution: true };
 
-const onNodeClick = (event : EventTarget , node : any) => {console.log('click node', node.data.label); 
+const onNodeClick = (event : React.MouseEvent<Element, MouseEvent>, node : any) => {console.log('click node', node.data.label); 
    push(`#${node.data.label}%20Department`);
 };
 
