@@ -15,24 +15,24 @@ export const departments = [
             "Development of a sampler for drilling and extraction of regolith."
         ],
         "people": [{
-            "name": "José Miguel Ferreira Morete da Silva Raposo",
+            "name": "José Raposo",
             "photo": person
         },
         {
-            "name": "Gabriel Ferreira Ribeiro",
+            "name": "Gabriel Ribeiro",
             "photo": person
         },
 
         {
-            "name": "Guilherme Cardoso Costa Santos",
+            "name": "Guilherme Santos",
             "photo": person
         },
         {
-            "name": "Miguel Brás Batista",
+            "name": "Miguel Batista",
             "photo": person
         },
         {
-            "name": "Tiago Filipe Ribeiro Santos",
+            "name": "Tiago Santos",
             "photo": person
         }]
     },
@@ -44,7 +44,7 @@ export const departments = [
             "Development of communication systems, ensuring reliable data transmission."
         ],
         "people": [{
-            "name": "Ângelo José Couto Pinheiro",
+            "name": "Ângelo Pinheiro",
             "photo": person
         }]
     },
@@ -58,23 +58,23 @@ export const departments = [
         ],
         "people": [
             {
-            "name": "Tiago Alexandre Sousa de Sá Pereira",
+            "name": "Tiago Pereira",
             "photo": person
         },
             {
-            "name": "Diogo Manuel Brito Pires",
+            "name": "Diogo Pires",
             "photo": person
         },
             {
-            "name": "Guilherme André Martins Zenha",
+            "name": "Guilherme Zenha",
             "photo": person
         },
             {
-            "name": "Luís Miguel Pinto da Cunha",
+            "name": "Luís Cunha",
             "photo": person
         },
             {
-            "name": "Ricardo Lopes Araújo",
+            "name": "Ricardo Araújo",
             "photo": person
         },
     ]
@@ -89,28 +89,28 @@ export const departments = [
         ],
         "people": [
             {
-            "name": "João Miguel Rodrigues Mirra",
+            "name": "João Mirra",
             "photo": person
         },
      
             {
-            "name": "Ana Isabel Coelho de Oliveira",
+            "name": "Ana Oliveira",
             "photo": person
         },
             {
-            "name": "André Emanuel da Silva",
+            "name": "André Silva",
             "photo": person
         },
             {
-            "name": "Arlindo Dinis Pereira de Carvalho",
+            "name": "Arlindo Carvalho",
             "photo": person
         },
             {
-            "name": "Maria João Ferreira Rocha",
+            "name": "Maria Rocha",
             "photo": person
         },
             {
-            "name": "Tiago Ricardo Coelho Alves",
+            "name": "Tiago Alves",
             "photo": person
         }],
     }

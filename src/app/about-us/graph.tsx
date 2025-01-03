@@ -6,6 +6,7 @@ import { ReactFlow, useNodesState, useEdgesState } from '@xyflow/react';
 import styles from "./styles.module.css";
 
 import '@xyflow/react/dist/style.css';
+import zIndex from '@mui/material/styles/zIndex';
 
 export default function Graph () {
     const { push } = useRouter();
@@ -15,7 +16,7 @@ export default function Graph () {
 const initialNodes = [
   { id: '1', data: { label: 'Leaders' }, position: { x: 100, y: 100 } },
   { id: '2', data: { label: 'Mechanics' }, position: { x: baseX + 0.75 * shift, y: 200 } },
-  { id: '3', data: { label: 'Electronics' }, position: { x: baseX + 2*shift, y: 200 } },
+  { id: '3', data: { label: 'Eletronics' }, position: { x: baseX + 2*shift, y: 200 } },
   { id: '4', data: { label: 'Software' }, position: { x: baseX - 0.75 * shift, y: 200 } },
   { id: '5', data: { label: 'Business' }, position: { x: baseX - 2*shift, y: 200 } },
 ];
@@ -40,6 +41,7 @@ const onNodeClick = (event : React.MouseEvent<Element, MouseEvent>, node : any) 
 const disabled = true
   return <div style={{ height: 400 ,width: '100%' }}  >
  <ReactFlow
+ className="nowheel"
       style={styles}
       nodes={initialNodes}
       edges={initialEdges}

@@ -47,10 +47,12 @@ export default function Department({title, responsabilities, people }: { title :
 </ul>
       </div>
     </div>
-
+    {
+      persons.length > 1 && 
       <div className={styles.persons}>
       {persons}
       </div>
+    }
   </div>
   </section>
   ;
