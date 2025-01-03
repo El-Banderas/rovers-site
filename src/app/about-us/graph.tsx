@@ -12,15 +12,16 @@ interface NodeData {
   label: string;
 }
 
+// TODO: Put this in other file
 const LeftConnection = ({ data } : {data : NodeData}) => (
-  <div >
+  <div className={styles.graphNode}>
     <Handle type="source" position={Position.Left} id="a"  />
     <div>{data.label}</div>
     <Handle type="target" position={Position.Left} id="b"  />
   </div>
 );
 const RightConnection = ({ data } : {data : NodeData}) => (
-  <div >
+  <div className={styles.graphNode}>
     <Handle type="source" position={Position.Right} id="a"  />
     <div>{data.label}</div>
     <Handle type="target" position={Position.Right} id="b"  />
@@ -50,8 +51,6 @@ const height =  window.innerWidth;
   const baseX = 100
   const horizontalShift = 150
 
-  const baseY = 200
-  const verticalShift = 50
 const initialNodesDesktop = [
   { id: '1',  data: { label: 'Leaders' }, position: { x: 100, y: 100 } },
   { id: '2', data: { label: 'Mechanics' }, position: { x: baseX + 0.75 * horizontalShift , y: 200 } },
@@ -61,13 +60,16 @@ const initialNodesDesktop = [
 ];
 
 
+  const baseY = 200
+  const verticalShift = 50
+  const baseXMobile = -250
 
 const initialNodesMobile = [
-  { id: '1', type: 'right', data: { label: 'Leaders' }, position: { x: 10, y:  200  } },
-  { id: '2',       type: 'left', data: { label: 'Mechanics' }, position: { x: 250, y: baseY + 0.75 * verticalShift } },
-  { id: '3',       type: 'left', data: { label: 'Eletronics' }, position: { x: 250, y: baseY + 2 * verticalShift } },
-  { id: '4',       type: 'left', data: { label: 'Software' }, position: { x: 250 , y: baseY - 0.75 * verticalShift } },
-  { id: '5',       type: 'left', data: { label: 'Business' }, position: { x: 250 , y: baseY - 2 * verticalShift } },
+  { id: '1', type: 'right', data: { label: 'Leaders' }, position: { x: -450, y:  200  } },
+  { id: '2',       type: 'left', data: { label: 'Mechanics' }, position: { x: baseXMobile, y: baseY + 0.75 * verticalShift } },
+  { id: '3',       type: 'left', data: { label: 'Eletronics' }, position: { x: baseXMobile, y: baseY + 2 * verticalShift } },
+  { id: '4',       type: 'left', data: { label: 'Software' }, position: { x: baseXMobile , y: baseY - 0.75 * verticalShift } },
+  { id: '5',       type: 'left', data: { label: 'Business' }, position: { x: baseXMobile , y: baseY - 2 * verticalShift } },
 ];
 const initialNodes = isMobile ? initialNodesMobile : initialNodesDesktop
 
