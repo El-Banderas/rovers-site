@@ -1,15 +1,50 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import React, { useState, useCallback } from 'react';
-import { ReactFlow, useNodesState, useEdgesState, Position } from '@xyflow/react';
+import React, { useState, useCallback , useEffect } from 'react';
+import { ReactFlow,Handle  , useNodesState, useEdgesState, Position } from '@xyflow/react';
 import styles from "./styles.module.css";
-import { isMobile } from '../utils/screenSize';
 
 import '@xyflow/react/dist/style.css';
 import zIndex from '@mui/material/styles/zIndex';
 
+interface NodeData {
+  label: string;
+}
+
+const LeftConnection = ({ data } : {data : NodeData}) => (
+  <div >
+    <Handle type="source" position={Position.Left} id="a"  />
+    <div>{data.label}</div>
+    <Handle type="target" position={Position.Left} id="b"  />
+  </div>
+);
+const RightConnection = ({ data } : {data : NodeData}) => (
+  <div >
+    <Handle type="source" position={Position.Right} id="a"  />
+    <div>{data.label}</div>
+    <Handle type="target" position={Position.Right} id="b"  />
+  </div>
+);
+
+const nodeTypes = {
+  left: LeftConnection ,
+  right: RightConnection,
+};
+
 export default function Graph () {
+  // TODO: Move this to a utils folder:
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const width = window.innerHeight
+const height =  window.innerWidth;
+
+    if (width < 768 && height < 500) console.log("True")
+    else console.log("False")
+    if (width < 768 && height < 500) return setIsMobile(true)
+    else setIsMobile(false)
+  }, [])
     const { push } = useRouter();
 
   const baseX = 100
@@ -25,14 +60,16 @@ const initialNodesDesktop = [
   { id: '5', data: { label: 'Business' }, position: { x: baseX - 2*horizontalShift , y: 200 } },
 ];
 
+
+
 const initialNodesMobile = [
-  { id: '1', data: { label: 'Leaders' }, position: { x: 10, y:  200  } },
-  { id: '2', data: { label: 'Mechanics' }, position: { x: 250, y: baseY + 0.75 * verticalShift } },
-  { id: '3', data: { label: 'Eletronics' }, position: { x: 250, y: baseY + 2 * verticalShift } },
-  { id: '4', data: { label: 'Software' }, position: { x: 250 , y: baseY - 0.75 * verticalShift } },
-  { id: '5', data: { label: 'Business' }, position: { x: 250 , y: baseY - 2 * verticalShift } },
+  { id: '1', type: 'right', data: { label: 'Leaders' }, position: { x: 10, y:  200  } },
+  { id: '2',       type: 'left', data: { label: 'Mechanics' }, position: { x: 250, y: baseY + 0.75 * verticalShift } },
+  { id: '3',       type: 'left', data: { label: 'Eletronics' }, position: { x: 250, y: baseY + 2 * verticalShift } },
+  { id: '4',       type: 'left', data: { label: 'Software' }, position: { x: 250 , y: baseY - 0.75 * verticalShift } },
+  { id: '5',       type: 'left', data: { label: 'Business' }, position: { x: 250 , y: baseY - 2 * verticalShift } },
 ];
-const initialNodes = isMobile() ? initialNodesMobile : initialNodesDesktop
+const initialNodes = isMobile ? initialNodesMobile : initialNodesDesktop
 
 const initialEdges = [
   { id: 'e1-2', source: '1', target: '2' },
@@ -57,6 +94,7 @@ const disabled = true
  className="nowheel"
       style={styles}
       nodes={initialNodes}
+      nodeTypes={nodeTypes}
       edges={initialEdges}
       attributionPosition="bottom-left"
       fitView
