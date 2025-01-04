@@ -12,12 +12,12 @@
 }
 
 .graphNode{
-    width: 150%;
     background-color: white;
+    width: 120px;
     padding-top: 2%;
     padding-bottom: 2%;
       text-align: center;
-      border: solid;
+      border:solid;
         border-radius: 5px;
 
 

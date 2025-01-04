@@ -22,9 +22,9 @@ const LeftConnection = ({ data } : {data : NodeData}) => (
 );
 const RightConnection = ({ data } : {data : NodeData}) => (
   <div className={styles.graphNode}>
-    <Handle type="source" position={Position.Right} id="a"  />
+    <Handle type="target" position={Position.Right} id="a"  />
     <div>{data.label}</div>
-    <Handle type="target" position={Position.Right} id="b"  />
+    <Handle type="source" position={Position.Right} id="b"  />
   </div>
 );
 
@@ -62,10 +62,10 @@ const initialNodesDesktop = [
 
   const baseY = 200
   const verticalShift = 50
-  const baseXMobile = -250
+  const baseXMobile = 150
 
 const initialNodesMobile = [
-  { id: '1', type: 'right', data: { label: 'Leaders' }, position: { x: -450, y:  200  } },
+  { id: '1', type: 'right', data: { label: 'Leaders' }, position: { x: -40, y:  200  } },
   { id: '2',       type: 'left', data: { label: 'Mechanics' }, position: { x: baseXMobile, y: baseY + 0.75 * verticalShift } },
   { id: '3',       type: 'left', data: { label: 'Eletronics' }, position: { x: baseXMobile, y: baseY + 2 * verticalShift } },
   { id: '4',       type: 'left', data: { label: 'Software' }, position: { x: baseXMobile , y: baseY - 0.75 * verticalShift } },
@@ -100,6 +100,7 @@ const disabled = true
       edges={initialEdges}
       attributionPosition="bottom-left"
       fitView
+        onInit={(reactFlowInstance) => reactFlowInstance.fitView()}
       fitViewOptions={{ padding: 0.5 }}
       nodesDraggable={!disabled}
   nodesConnectable={!disabled}
