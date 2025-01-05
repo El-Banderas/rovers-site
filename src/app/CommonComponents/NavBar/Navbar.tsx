@@ -58,11 +58,11 @@ export default function NavBar(props: Props) {
       case pageName.includes('News'):
         return "/news";
       case pageName.includes('Projects'):
-        return "/projects";
+        return "/coming-soon";
       case pageName.includes('About us'):
         return "/about-us";
       default:
-        return "/news"
+        return "/coming-soon"
 
     }
   }

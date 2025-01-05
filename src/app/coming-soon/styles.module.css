@@ -1,0 +1,13 @@
+ 
+ .content{
+    height: 50vh;
+    width: 100vw;
+ }
+
+ .centered{
+    margin-top: 30vh ;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+ }
