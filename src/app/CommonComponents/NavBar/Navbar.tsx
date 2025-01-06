@@ -84,26 +84,14 @@ export default function NavBar(props: Props) {
       <HideOnScroll {...props}>
         <AppBar className={styles.navbar} color="transparent" sx={{ backdropFilter: "blur(3px)" }}>
           <Toolbar className={styles.toolbar}>
-            <Box sx={{ display: "flex", alignItems: "center", flex: "1" }}>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                sx={{ mr: 2, ...(true && { display: "none" }) }}
-              >
-                <MenuIcon />
-              </IconButton>
+            <Box sx={{ flex: "1" }}>
+              
               <Image
                 src={logo}
                 alt="Taurus Space Logo"
-                style={{
-                  width: '20%',
-                  height: 'auto',
-                  marginRight: '3%',
-                  marginLeft: '1%',
-                  cursor: 'pointer'
-                }}
+                
 
+      className={styles.logoLeft}          
 
                 onClick={() => router.push("/")}
               />
