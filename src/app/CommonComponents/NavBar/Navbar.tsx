@@ -17,6 +17,7 @@ import logo from '../../../../public/NameBlack.png';
 import leftLogo from '../../../../public/Icon_logo_azul_dourado.png';
 import styles from './styles.module.css'
 
+
 import { useRouter } from 'next/navigation'
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -81,63 +82,116 @@ export default function NavBar(props: Props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar className={styles.navbar} color="transparent" sx={{backdropFilter:"blur(3px)"}}>
-           <Toolbar>
-        <Box sx={{ display: "flex", alignItems: "center", flex: "1" }}>
-          <IconButton
+        <AppBar className={styles.navbar} color="transparent" sx={{ backdropFilter: "blur(3px)" }}>
+          <Toolbar className={styles.toolbar}>
+            <Box sx={{ display: "flex", alignItems: "center", flex: "1" }}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                sx={{ mr: 2, ...(true && { display: "none" }) }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Image
+                src={logo}
+                alt="Taurus Space Logo"
+                style={{
+                  width: '20%',
+                  height: 'auto',
+                  marginRight: '3%',
+                  marginLeft: '1%',
+                  cursor: 'pointer'
+                }}
+
+
+                onClick={() => router.push("/")}
+              />
+            </Box>
+            <Box
+              sx={{
+                flex: "1",
+              }}
+              
+            >
+              <div className={styles.logoMiddle}>
+              <Image
+                src={leftLogo}
+                style={{
+                  width: '20%',
+                  height: 'auto',
+                  cursor: 'pointer',
+                }}
+                //width={100}
+                //height={50}
+                alt="Taurus Space logo"
+
+                onClick={() => router.push("/")}
+              />
+</div>
+
+                              </Box>
+<Box sx={{ flex: "1",  display: {  md: 'none' }}}>
+              <div className={styles.debug}>
+   <IconButton
+            size="medium"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
             color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            sx={{ mr: 2, ...(true && { display: "none" }) }}
           >
             <MenuIcon />
           </IconButton>
-<Image
-        src={logo}
-        alt="Taurus Space Logo"
-        style={{
-            width: '15%',
-            height: 'auto',
-            marginRight: '3%',
-            marginLeft: '1%',
-            cursor: 'pointer'
+                <Menu
+          id="menu-appbar"
+          anchorEl={anchorElNav}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
           }}
-        
-
-              onClick={() => router.push("/")}
-      />
-        </Box>
-        <Box
+          keepMounted
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'left',
+          }}
+          open={Boolean(anchorElNav)}
+          onClose={handleCloseNavMenu}
           sx={{
-            height: 32,
+            display: { xs: 'block', md: 'none' },
           }}
-        />
-         <Image
-          src={leftLogo}
-          style={{
-            width: '4%',
-            height: 'auto',
-            marginRight: '3%',
-            marginLeft: '1%',
-            cursor: 'pointer'
-          }}
-          //width={100}
-          //height={50}
-          alt="Taurus Space logo"
+        >
+          {pages.map((page) => (
+            <Button
+              key={page}
+              sx={{ my: 2, color: 'black', display: 'block' }}
+              onClick={() => router.push(convertPageNameURL(page))}
+            >
+              {page}
+            </Button>
 
-              onClick={() => router.push("/")}
-        />
-        <Box sx={{ flex: "1" }}></Box>
+          ))}
+        </Menu> 
+        </div>
+            </Box>
+              <Box sx={{ flex: "1", display: { xs: 'none', md: 'flex' } }}>
+                {pages.map((page) => (
+                  <Button
+                    key={page}
+                    sx={{ my: 2, color: 'black', display: 'block' }}
+                    onClick={() => router.push(convertPageNameURL(page))}
+                  >
+                    {page}
+                  </Button>
+                ))}
+              </Box>
 
-        <Box sx={{ display: "flex", alignItems: "right"}}             onClick={handleOpenNavMenu}
->Direita
 
-        </Box>
 
-      </Toolbar>
+          </Toolbar>
         </AppBar>
       </HideOnScroll>
-      
+
     </React.Fragment>
   );
 

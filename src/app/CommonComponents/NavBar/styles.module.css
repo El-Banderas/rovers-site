@@ -4,3 +4,13 @@
     border-bottom: solid;
     border-color: black;
 }
+.logoMiddle{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    width: fit-content;
+}
+.debug{
+    display: flex;
+  justify-content: right;
+}
