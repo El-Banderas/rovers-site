@@ -13,7 +13,8 @@ import Menu from '@mui/material/Menu';
 import Typography from "@mui/material/Typography";
 
 import Image from 'next/image'
-import logo from '../../../../public/NameBlack.png'
+import logo from '../../../../public/NameBlack.png';
+import leftLogo from '../../../../public/Icon_logo_azul_dourado.png';
 import styles from './styles.module.css'
 
 import { useRouter } from 'next/navigation'
@@ -91,9 +92,20 @@ export default function NavBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            TITLE
-          </Typography>
+<Image
+        src={logo}
+        alt="Taurus Space Logo"
+        style={{
+            width: '15%',
+            height: 'auto',
+            marginRight: '3%',
+            marginLeft: '1%',
+            cursor: 'pointer'
+          }}
+        
+
+              onClick={() => router.push("/")}
+      />
         </Box>
         <Box
           sx={{
@@ -101,9 +113,9 @@ export default function NavBar(props: Props) {
           }}
         />
          <Image
-          src={logo}
+          src={leftLogo}
           style={{
-            width: '10%',
+            width: '4%',
             height: 'auto',
             marginRight: '3%',
             marginLeft: '1%',
@@ -117,7 +129,8 @@ export default function NavBar(props: Props) {
         />
         <Box sx={{ flex: "1" }}></Box>
 
-        <Box sx={{ display: "flex", alignItems: "right"}}>Direita
+        <Box sx={{ display: "flex", alignItems: "right"}}             onClick={handleOpenNavMenu}
+>Direita
 
         </Box>
 
