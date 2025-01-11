@@ -13,8 +13,8 @@ import Menu from '@mui/material/Menu';
 import Typography from "@mui/material/Typography";
 
 import Image from 'next/image'
-import logo from '../../../../public/NameBlack.png';
-import leftLogo from '../../../../public/Icon_logo_azul_dourado.png';
+import logo from '../../../../public/Branco_Transparente.png';
+import leftLogo from '../../../../public/Branco_Transparente.png';
 import styles from './styles.module.css'
 
 
