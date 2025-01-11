@@ -1,13 +1,13 @@
 'use client'
 import styles from "./department.styles.module.css";
+import { useEffect } from "react";
 import Image from "next/image";
-
+import Fade from '@mui/material/Fade';
 import photo from '/public/Person.jpg'
 import { useRouter } from 'next/navigation'
 import {Person} from './data'
 export default function Department({title, responsabilities, people }: { title : string, responsabilities : string[], people : Person[] }) {
   const router = useRouter()
-
   const listReponsabilities = responsabilities.map(point =>
     <li key={point}>{point}</li>
   );
@@ -28,10 +28,12 @@ const persons = others.map(person =>
     </div>
   );
   return <section id={title}>
-   <div className={styles.content}>
+
+   <div className={styles.content} data-aos="fade-right" >
     <h1 className="">{title}</h1>
     <div className={styles.firstRow}>
-      <Image
+       
+       <Image
         src={director.photo}
         alt="Leader"
         width={200}
@@ -47,7 +49,8 @@ const persons = others.map(person =>
 {listReponsabilities}
 </ul>
       </div>
-    </div>
+    </div>    
+     
     {
       others.length > 0 && 
       <div className={styles.persons}>
@@ -55,6 +58,7 @@ const persons = others.map(person =>
       </div>
     }
   </div>
+
   </section>
   ;
 }

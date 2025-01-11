@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./CommonComponents/NavBar/Navbar";
 import Footer from "./CommonComponents/Footer/Footer";
+import { AOSInit } from './aos'
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+       <AOSInit />
       <body className={inter.className}>
      <NavBar /> 
 {children}
