@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 
 import Image from 'next/image'
 import logo from '../../../../public/NameBlack.png';
-import leftLogo from '../../../../public/Icon_logo_azul_dourado.png';
+import leftLogo from '../../../../public/Icon_logo_branco_preto.png';
 import styles from './styles.module.css'
 
 
@@ -127,7 +127,6 @@ export default function NavBar(props: Props) {
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={handleOpenNavMenu}
-            color="white"
           >
             <MenuIcon style={{ color: 'white' }}/>
           </IconButton>
