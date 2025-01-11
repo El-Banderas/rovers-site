@@ -127,9 +127,9 @@ export default function NavBar(props: Props) {
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={handleOpenNavMenu}
-            color="inherit"
+            color="white"
           >
-            <MenuIcon />
+            <MenuIcon style={{ color: 'white' }}/>
           </IconButton>
                 <Menu
           id="menu-appbar"
@@ -166,7 +166,7 @@ export default function NavBar(props: Props) {
                 {pages.map((page) => (
                   <Button
                     key={page}
-                    sx={{ my: 2, color: 'black', display: 'block' }}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
                     onClick={() => router.push(convertPageNameURL(page))}
                   >
                     {page}

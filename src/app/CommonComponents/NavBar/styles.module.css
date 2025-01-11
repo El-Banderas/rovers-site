@@ -3,6 +3,7 @@
     box-shadow: none;
     border-bottom: solid;
     border-color: black;
+    background-color: black;
 }
 .logoMiddle{
     display: flex;
