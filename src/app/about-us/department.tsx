@@ -29,7 +29,7 @@ const persons = others.map(person =>
   );
   return <section id={title}>
 
-   <div className={styles.content} data-aos="fade-right" >
+   <div className={styles.content} data-aos="fade-up" data-aos-duration="1500" >
     <h1 className="">{title}</h1>
     <div className={styles.firstRow}>
        

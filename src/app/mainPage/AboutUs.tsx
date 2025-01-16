@@ -23,7 +23,7 @@ In other words: we are <strong>UNIQUE</strong>!
 
         </h3>
         <div className={styles.buttonCenter}>
-        <MyButton text="Saber mais" onClick={() => router.push("/news")}></MyButton>
+        <MyButton text="Learn more" onClick={() => router.push("/about-us")}></MyButton>
         </div>
       </div>
       </div>

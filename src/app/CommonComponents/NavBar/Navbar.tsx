@@ -13,8 +13,8 @@ import Menu from '@mui/material/Menu';
 import Typography from "@mui/material/Typography";
 
 import Image from 'next/image'
-import logo from '../../../../public/NameBlack.png';
-import leftLogo from '../../../../public/Icon_logo_branco_preto.png';
+import leftLogo from '../../../../public/NameWhite.png';
+import logo from '../../../../public/Icon_logo_azul_dourado.png';
 import styles from './styles.module.css'
 
 
@@ -23,7 +23,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 
-const pages = ['About us', 'News', 'Sponsors', 'Projects', 'Contacts'];
+const pages = ['About us', 'News', 'Partners', 'Projects', 'Contacts'];
 
 interface Props {
   window?: () => Window;
@@ -106,7 +106,7 @@ export default function NavBar(props: Props) {
               <Image
                 src={leftLogo}
                 style={{
-                  width: '20%',
+                  width: '25%',
                   height: 'auto',
                   cursor: 'pointer',
                 }}
@@ -151,7 +151,7 @@ export default function NavBar(props: Props) {
           {pages.map((page) => (
             <Button
               key={page}
-              sx={{ my: 2, color: 'black', display: 'block' }}
+              sx={{ my: 2,  display: 'block' }}
               onClick={() => router.push(convertPageNameURL(page))}
             >
               {page}
@@ -161,7 +161,7 @@ export default function NavBar(props: Props) {
         </Menu> 
         </div>
             </Box>
-              <Box sx={{ flex: "1", display: { xs: 'none', md: 'flex' } }}>
+              <Box sx={{ flex: "1", display: { xs: 'none', md: 'flex' }, gap: "3%" }}>
                 {pages.map((page) => (
                   <Button
                     key={page}

@@ -2,8 +2,8 @@
 .navbar {
     box-shadow: none;
     border-bottom: solid;
-    border-color: black;
-    background-color: black;
+        background-color: black;
+
 }
 .logoMiddle{
     display: flex;
@@ -16,7 +16,7 @@
   justify-content: right;
 }
 .logoLeft{
-    width: 10vw;
+    width: 1vw;
     height: auto;
 
                   margin-right: 3%;
