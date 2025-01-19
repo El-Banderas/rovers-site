@@ -12,16 +12,19 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import Typography from "@mui/material/Typography";
 
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import Image from 'next/image'
 import leftLogo from '../../../../public/NameWhite.png';
 import logo from '../../../../public/Icon_logo_azul_dourado.png';
 import styles from './styles.module.css'
 
-
 import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
+import path from 'path';
 
 const pages = ['About us', 'News', 'Partners', 'Projects', 'Contacts'];
 
@@ -55,6 +58,9 @@ export default function NavBar(props: Props) {
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const router = useRouter()
+    const pathname = usePathname()
+    console.log("PATH")
+    console.log(pathname)
 
   const convertPageNameURL = (pageName: string) => {
     switch (true) {
@@ -82,20 +88,16 @@ export default function NavBar(props: Props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar className={styles.navbar} color="transparent" sx={{ backdropFilter: "blur(3px)" }}>
+        <AppBar className={styles.navbar} >
           <Toolbar className={styles.toolbar}>
-            <Box sx={{ flex: "1" }}>
-              
-              <Image
-                src={logo}
-                alt="Taurus Space Logo"
-                
-
-      className={styles.logoLeft}          
-
-                onClick={() => router.push("/")}
-              />
-            </Box>
+            <Box sx={{ flex: "1" }} className={styles.logosLeft}>
+          <div onClick={() => window.location.replace("https://www.linkedin.com/company/taurus-space/")} style={{ cursor: 'pointer' }}>
+            <LinkedInIcon  sx={{ color: 'white', fontSize:{ xs: 'medium', sm: '150%'}}}/>
+          </div>
+          <div onClick={() => window.location.replace("https://www.instagram.com/taurusspaceprojects/")} style={{ cursor: 'pointer' }}>
+            <InstagramIcon sx={{ color: 'white', fontSize:{ xs: 'medium', sm: '150%'}}}/>
+          </div>    
+                          </Box>
             <Box
               sx={{
                 flex: "1",
@@ -123,7 +125,6 @@ export default function NavBar(props: Props) {
               <div className={styles.debug}>
    <IconButton
             size="medium"
-            aria-label="account of current user"
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={handleOpenNavMenu}
@@ -147,11 +148,20 @@ export default function NavBar(props: Props) {
           sx={{
             display: { xs: 'block', md: 'none' },
           }}
+          PaperProps={{
+       style: {
+            width: "96%",
+            maxWidth: "96%",
+            backgroundColor: 'black',
+            left: 0,
+            right: 0
+          }
+        }}
         >
           {pages.map((page) => (
             <Button
               key={page}
-              sx={{ my: 2,  display: 'block' }}
+              sx={{ my: 2, margin: 'auto',width: '50%', color: 'white' , display: 'block' }}
               onClick={() => router.push(convertPageNameURL(page))}
             >
               {page}
@@ -165,6 +175,7 @@ export default function NavBar(props: Props) {
                 {pages.map((page) => (
                   <Button
                     key={page}
+
                     sx={{ my: 2, color: 'white', display: 'block' }}
                     onClick={() => router.push(convertPageNameURL(page))}
                   >
