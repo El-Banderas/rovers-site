@@ -150,8 +150,8 @@ export default function NavBar(props: Props) {
           }}
           PaperProps={{
        style: {
-            width: "96%",
-            maxWidth: "96%",
+            width: "100%",
+            maxWidth: "100%",
             backgroundColor: 'black',
             left: 0,
             right: 0
