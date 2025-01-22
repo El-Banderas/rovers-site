@@ -57,8 +57,6 @@ export default function NavBar(props: Props) {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const router = useRouter()
   const pathname = usePathname()
-  console.log("PATH")
-  console.log(pathname)
 
   const pageNameToURL: { [pageName: string]: string; } = {
     "News": "/news",

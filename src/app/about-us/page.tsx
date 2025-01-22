@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./styles.module.css";
 import Graph from "./graph"
+import TextPart  from "./textPart/textPart"
 import Department from "./department"
 import {departments} from './data'
 
@@ -16,6 +17,7 @@ export default function Home() {
       <ImageWText image={firstImg} title="About us" description="Lorem Ipsum is simply dummy text" />
      
     <Graph/>
+    <TextPart/>
     {departments.map(department =>  
 
     <Department key={department.title} title={department.title} responsabilities={department.responsabilities} people={department.people}/>
