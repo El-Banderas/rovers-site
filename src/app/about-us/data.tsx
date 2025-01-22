@@ -116,3 +116,32 @@ export const departments = [
     }
 ]
 
+export const texts = {
+    "": {
+        "text" : "Taurus Space is a youth-driven team dedicated to undertaking projects aimed at competition and/or research and investigation. Our mission extends beyond creating physical projects related to autonomous systems for space and defense; we can also tackle conceptual projects that push the boundaries of innovation and technology. By engaging in both practical and theoretical work, we aim to foster a comprehensive understanding of advanced systems among our members, preparing them for future challenges in the aerospace and defense industries.",
+    },
+    "Objectives": {
+        "text": "Our team aims to fully develop, build, and deploy autonomous systems for space and defense applications. Our flagship project is a rover, named Zenith, which we aim to complete in 2 years. Throughout the development of our robotic systems, we intend to publish papers and articles regarding our approaches and considerations. We aim to participate in international competitions as well as use our products for field tests.",
+    },
+    "Mission": {
+        "text": "Our mission is to inspire innovation and optimization for the sake of technological development and advancement. By gathering a team of young adults and students, we also aim to inspire proactivity within the youth as well as a fascination for space and extraterrestrial exploration. By measuring the impact of our project through the metrics of performance in competitions, partnerships formed, and the overall engagement of the youth in our projects, we intend to continuously improve our robotic systems and, when the time comes, embark on new challenges.",
+    },
+    "Vision": {
+        "text": "Our vision is to spearhead student- and young adult-driven initiatives in Portugal for developing advanced robotic explorers and autonomous systems while also establishing a significant impact across Europe. Through our collective efforts, we envision a future where:",
+        "points" : [
+            "Our partnerships with industry leaders, educational and scientific institutions provide an ecosystem of innovation and advancements;",
+            "Our creative and innovative approaches set new benchmarks for problem-solving in robotic space systems;",
+            "Our research papers contribute a continuous stream of new studies and hold international relevance."
+        ]
+    },
+    "Values": {
+        "text": "Taurus Space's values can be summarized in the following points:",
+        "points" : [
+            "Professionalism: We uphold the highest standards of professionalism in every aspect of our work, ensuring reliability and integrity.",
+            "Excellence: We strive for excellence in all our endeavors, pushing the boundaries of what is possible.",
+            "Prestige: Being the only Portuguese team focused on building autonomous systems for space and defense, our ambition drives us to explore new frontiers and achieve groundbreaking innovations.",
+            "Commitment: We believe in the power of collaboration and compromise, working together to reach our common goals.",
+            "Robustness: Our focus on robustness ensures that our solutions are resilient, reliable, and capable of withstanding any challenge without fail."
+        ]
+    }
+}

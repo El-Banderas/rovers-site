@@ -26,8 +26,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import path from 'path';
 
-const pages = ['About us', 'News', 'Partners', 'Projects', 'Contacts'];
-
 interface Props {
   window?: () => Window;
   children?: React.ReactElement<any>;
@@ -58,22 +56,23 @@ export default function NavBar(props: Props) {
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const router = useRouter()
-    const pathname = usePathname()
-    console.log("PATH")
-    console.log(pathname)
+  const pathname = usePathname()
+  console.log("PATH")
+  console.log(pathname)
+
+  const pageNameToURL: { [pageName: string]: string; } = {
+    "News": "/news",
+    "Projects": "/coming-soon",
+    "Partners": "/coming-soon",
+    "About us": "/about-us",
+  }
 
   const convertPageNameURL = (pageName: string) => {
-    switch (true) {
-      case pageName.includes('News'):
-        return "/news";
-      case pageName.includes('Projects'):
-        return "/coming-soon";
-      case pageName.includes('About us'):
-        return "/about-us";
-      default:
-        return "/coming-soon"
-
+    if (pageNameToURL[pageName] !== undefined) {
+      return pageNameToURL[pageName]
     }
+    return "/coming-soon"
+
   }
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -84,6 +83,12 @@ export default function NavBar(props: Props) {
     setAnchorElNav(null);
   };
 
+  const isUnderlined = (btnText: string) => {
+    if (pathname === "/coming-soon") return 'none'
+    if (pageNameToURL[btnText] === pathname) return 'underline'
+    return 'none'
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -91,98 +96,98 @@ export default function NavBar(props: Props) {
         <AppBar className={styles.navbar} >
           <Toolbar className={styles.toolbar}>
             <Box sx={{ flex: "1" }} className={styles.logosLeft}>
-          <div onClick={() => window.location.replace("https://www.linkedin.com/company/taurus-space/")} style={{ cursor: 'pointer' }}>
-            <LinkedInIcon  sx={{ color: 'white', fontSize:{ xs: 'medium', sm: '150%'}}}/>
-          </div>
-          <div onClick={() => window.location.replace("https://www.instagram.com/taurusspaceprojects/")} style={{ cursor: 'pointer' }}>
-            <InstagramIcon sx={{ color: 'white', fontSize:{ xs: 'medium', sm: '150%'}}}/>
-          </div>    
-                          </Box>
+              <div onClick={() => window.location.replace("https://www.linkedin.com/company/taurus-space/")} style={{ cursor: 'pointer' }}>
+                <LinkedInIcon sx={{ color: 'white', fontSize: { xs: 'medium', sm: '150%' } }} />
+              </div>
+              <div onClick={() => window.location.replace("https://www.instagram.com/taurusspaceprojects/")} style={{ cursor: 'pointer' }}>
+                <InstagramIcon sx={{ color: 'white', fontSize: { xs: 'medium', sm: '150%' } }} />
+              </div>
+            </Box>
             <Box
               sx={{
                 flex: "1",
               }}
-              
+
             >
               <div className={styles.logoMiddle}>
-              <Image
-                src={leftLogo}
-                style={{
-                  width: '25%',
-                  height: 'auto',
-                  cursor: 'pointer',
-                }}
-                //width={100}
-                //height={50}
-                alt="Taurus Space logo"
+                <Image
+                  src={leftLogo}
+                  style={{
+                    width: '25%',
+                    height: 'auto',
+                    cursor: 'pointer',
+                  }}
+                  //width={100}
+                  //height={50}
+                  alt="Taurus Space logo"
 
-                onClick={() => router.push("/")}
-              />
-</div>
+                  onClick={() => router.push("/")}
+                />
+              </div>
 
-                              </Box>
-<Box sx={{ flex: "1",  display: {  md: 'none' }}}>
-              <div className={styles.debug}>
-   <IconButton
-            size="medium"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleOpenNavMenu}
-          >
-            <MenuIcon style={{ color: 'white' }}/>
-          </IconButton>
-                <Menu
-          id="menu-appbar"
-          anchorEl={anchorElNav}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-          keepMounted
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'left',
-          }}
-          open={Boolean(anchorElNav)}
-          onClose={handleCloseNavMenu}
-          sx={{
-            display: { xs: 'block', md: 'none' },
-          }}
-          PaperProps={{
-       style: {
-            width: "100%",
-            maxWidth: "100%",
-            backgroundColor: 'black',
-            left: 0,
-            right: 0
-          }
-        }}
-        >
-          {pages.map((page) => (
-            <Button
-              key={page}
-              sx={{ my: 2, margin: 'auto',width: '50%', color: 'white' , display: 'block' }}
-              onClick={() => router.push(convertPageNameURL(page))}
-            >
-              {page}
-            </Button>
-
-          ))}
-        </Menu> 
-        </div>
             </Box>
-              <Box sx={{ flex: "1", display: { xs: 'none', md: 'flex' }, gap: "3%" }}>
-                {pages.map((page) => (
-                  <Button
-                    key={page}
+            <Box sx={{ flex: "1", display: { md: 'none' } }}>
+              <div className={styles.debug}>
+                <IconButton
+                  size="medium"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handleOpenNavMenu}
+                >
+                  <MenuIcon style={{ color: 'white' }} />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorElNav}
+                  anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                  }}
+                  open={Boolean(anchorElNav)}
+                  onClose={handleCloseNavMenu}
+                  sx={{
+                    display: { xs: 'block', md: 'none' },
+                  }}
+                  PaperProps={{
+                    style: {
+                      width: "100%",
+                      maxWidth: "100%",
+                      backgroundColor: 'black',
+                      left: 0,
+                      right: 0
+                    }
+                  }}
+                >
+                  {Object.keys(pageNameToURL).map((page) => (
+                    <Button
+                      key={page}
+                      sx={{ my: 2, margin: 'auto', width: '50%', color: 'white', display: 'block' }}
+                      onClick={() => router.push(convertPageNameURL(page))}
+                    >
+                      {page}
+                    </Button>
 
-                    sx={{ my: 2, color: 'white', display: 'block' }}
-                    onClick={() => router.push(convertPageNameURL(page))}
-                  >
-                    {page}
-                  </Button>
-                ))}
-              </Box>
+                  ))}
+                </Menu>
+              </div>
+            </Box>
+            <Box sx={{ flex: "1", display: { xs: 'none', md: 'flex' }, gap: "3%" }}>
+              {Object.keys(pageNameToURL).map((page) => (
+                <Button
+                  key={page}
+
+                  sx={{ my: 2, color: 'white', display: 'block', textDecoration: isUnderlined(page) }}
+                  onClick={() => router.push(convertPageNameURL(page))}
+                >
+                  {page}
+                </Button>
+              ))}
+            </Box>
 
 
 
