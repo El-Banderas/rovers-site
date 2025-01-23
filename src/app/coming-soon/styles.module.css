@@ -2,12 +2,17 @@
  .content{
     height: 50vh;
     width: 100vw;
- }
+ } 
+ 
 
  .centered{
     margin-top: 30vh ;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    background-color: red;
+ }
+.title{
+   text-align: center;
+   font-size: 2.5em;
+   padding-bottom: 20%;
  }
