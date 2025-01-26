@@ -175,7 +175,7 @@ export default function NavBar(props: Props) {
                 </Menu>
               </div>
             </Box>
-            <Box sx={{ flex: "1", display: { xs: 'none', md: 'flex' }, gap: "3%" }}>
+            <Box sx={{ flex: "1", display: { xs: 'none', md: 'flex' }, gap: "3%", justifyContent: "flex-end" }}>
               {Object.keys(pageNameToURL).map((page) => (
                 <Button
                   key={page}
@@ -194,6 +194,7 @@ export default function NavBar(props: Props) {
         </AppBar>
       </HideOnScroll>
 
+          <Toolbar/>
     </React.Fragment>
   );
 
