@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 import LinearProgress from '@mui/material/LinearProgress';
-import CostumeSlider from './CostumSlider';
+import CostumeSlider from './costumSlider';
 
 export default function ComingSoon() {
   const [progress, setProgress] = useState(0);

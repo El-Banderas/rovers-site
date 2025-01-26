@@ -139,32 +139,33 @@ export default function NavBar(props: Props) {
                   anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: 'bottom',
-                    horizontal: 'left',
+                    horizontal: 'center',
                   }}
                   keepMounted
                   transformOrigin={{
                     vertical: 'top',
-                    horizontal: 'left',
+                    horizontal: 'center',
                   }}
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
                   sx={{
-                    display: { xs: 'block', md: 'none' },
+                    display: { xs: 'flex', md: 'none' },
                   }}
+                  marginThreshold={0}
                   PaperProps={{
                     style: {
                       width: "100%",
                       maxWidth: "100%",
-                      backgroundColor: 'black',
                       left: 0,
-                      right: 0
+                      right: 0,
+                      backgroundColor: 'black',
                     }
                   }}
                 >
                   {Object.keys(pageNameToURL).map((page) => (
                     <Button
                       key={page}
-                      sx={{ my: 2, margin: 'auto', width: '50%', color: 'white', display: 'block' }}
+                      sx={{ my: 2, margin: 'auto', width: '50%', color: 'white', display: 'block', textDecoration: isUnderlined(page) }}
                       onClick={() => router.push(convertPageNameURL(page))}
                     >
                       {page}
