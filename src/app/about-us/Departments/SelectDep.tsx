@@ -16,7 +16,7 @@ export default function SelectDpt () {
   <ButtonGroup variant="contained" aria-label="Basic button group" >
     {departmentsTitles.map(title =>  
 
-  <Button className={styles.btnSselectDpt}>{title}</Button>
+  <Button key={title} className={styles.btnSselectDpt}>{title}</Button>
     )
 
   }
