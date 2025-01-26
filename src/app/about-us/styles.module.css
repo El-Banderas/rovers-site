@@ -11,18 +11,6 @@
 
 }
 
-.graphNode{
-    background-color: white;
-    width: 120px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-      text-align: center;
-      border:solid;
-        border-radius: 5px;
-
-
-}
-
 @media (max-width: 768px),
 (max-height: 500px) {
     .vercelLogo {
