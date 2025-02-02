@@ -6,8 +6,8 @@ export interface Person {
   photo: any;
 }
 
-export const departments = [
-    {
+export const departments = {
+   "Mechanics Department" : {
         "title": "Mechanics Department",
         "responsabilities": [
             "Responsible for the dynamics, kinematics, simulation and development of the robotic arm;",
@@ -36,7 +36,8 @@ export const departments = [
             "photo": person
         }]
     },
-    {
+    
+        "Eletronics Department": {
         "title": "Eletronics Department",
         "responsabilities": [
             "Integration and development of electronics, CAD designs and sensor systems;",
@@ -48,6 +49,7 @@ export const departments = [
             "photo": person
         }]
     },
+        "Software Department" :
     {
         "title": "Software Department",
         "responsabilities": [
@@ -79,6 +81,8 @@ export const departments = [
         },
     ]
     },
+
+        "Business Department":
 {
         "title": "Business Department",
         "responsabilities": [
@@ -114,7 +118,7 @@ export const departments = [
             "photo": person
         }],
     }
-]
+}
 
 export interface IChapter {
   text: string
