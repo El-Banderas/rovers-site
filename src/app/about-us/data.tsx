@@ -5,8 +5,12 @@ export interface Person {
   name: string;
   photo: any;
 }
-
-export const departments = {
+export interface Department {
+  title: string
+  responsabilities: string[]
+  people: Person[]
+}
+export const departments : {[depName : string] : Department;} = {
    "Mechanics Department" : {
         "title": "Mechanics Department",
         "responsabilities": [
