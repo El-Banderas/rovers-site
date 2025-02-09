@@ -5,7 +5,7 @@ import Image from "next/image";
 import Fade from '@mui/material/Fade';
 import photo from '/public/Person.jpg'
 import { useRouter } from 'next/navigation'
-import {Person} from './data'
+import {Person} from '@/app/about-us/data'
 export default function Department({title, responsabilities, people }: { title : string, responsabilities : string[], people : Person[] }) {
   const router = useRouter()
   const listReponsabilities = responsabilities.map(point =>
