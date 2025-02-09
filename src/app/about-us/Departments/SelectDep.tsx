@@ -21,14 +21,14 @@ export default function SelectDpt () {
       const department = useMemo(()=> (departments[selectedDpt]), [selectedDpt]);
 
   return <div  className={styles.selectDpt}>
-  <ButtonGroup variant="contained" aria-label="Basic button group" >
+    <div  className={styles.selectDptBtns}>
     {departmentsTitles.map(title =>  
 
-  <Button onClick={() => selectDPT(title)} key={title} className={styles.btnSselectDpt}>{title}</Button>
+  <Button onClick={() => selectDPT(title)} key={title} className={styles.btnDpt }>{title}</Button>
     )
 
   }
-  </ButtonGroup>
+</div>
   <Department key={department.title} title={department.title} responsabilities={department.responsabilities} people={department.people}/>
 </div>
 }
