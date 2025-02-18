@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css'
 import HorizontalScroll from './horizontalScroll';
+import Sponsors from './sponsors';
 
 
 export default function Page() {
@@ -24,8 +25,11 @@ export default function Page() {
       }
     </div>
     {
-      option === "Partners" &&
+      option === "Partners" ?
       <HorizontalScroll />
+      :
+      <Sponsors />
+
     }
   </div>;
 }

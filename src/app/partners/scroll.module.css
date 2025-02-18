@@ -1,5 +1,4 @@
 .scroll{
-  background-color: red;
   padding: 5% 5% 10% 5%;
 
   display: flex; 
@@ -9,5 +8,11 @@ gap: 5%;
 }
 
 .partner{
-  background-color: blue;
+      border: 1px solid lightgray;
+    float: left;
+    padding: 10px;
+    box-shadow: 0 0 10px #888;
+}
+.partnerName{
+text-align: center;
 }
