@@ -10,19 +10,36 @@ export default function HorizontalScroll() {
   
 
   const [idxPartner, setIdxPartner] = useState<number>(0);
+  const [direction, setDirection] = useState<string>('fade-left');
 
-    /*
     const visiblePartners = useMemo(
-    () => filterTodos(todos, tab),
+    () => {
+      const idx = idxPartner
+      const length = partners.length
+      const previous = idx == 0 ? partners[length - 1] : partners[(idx-1) % length];  
+      const current = partners[idx % length];
+      const next = partners[(idx+1) % length]
+      return [previous, current, next]
+    },
     [idxPartner]
-  );*/
+  );
+
+  const incrementIdx = () => {
+    setIdxPartner((prevIndx) => prevIndx+1)
+    if (direction == 'fade-right') setDirection(() => 'fade-left')
+  }
+
+  const decrementIdx = () => {
+    setIdxPartner((prevIndx) => (prevIndx == 0 ? partners.length-1 : prevIndx-1) )
+    if (direction == 'fade-left') setDirection(() => 'fade-right')
+  }
 
   return <div className={styles.scroll}>
-<div>
+<div onClick={decrementIdx}>
   Esq
 </div>
-      {partners.map(partner =>
-        <div key={partner.name}  className={styles.partner}>
+      {visiblePartners.map(partner =>
+        <div key={partner.name}  className={styles.partner} data-aos={direction}>
  <Image
         src={partner.image}
         alt={partner.name}
@@ -36,7 +53,7 @@ export default function HorizontalScroll() {
         </div>
       )
       }
-<div>
+<div onClick={incrementIdx}>
 Dir
 </div>
     </div>;

@@ -26,7 +26,7 @@ export default function Sponsors () {
   const cachedValue = useMemo(() => [prevItem(), items[currentIndex], nextItem()], [currentIndex])
    setTimeout(() => {
     setCurrentIndex((old) => old+1)
-      }, 500); // Match the transition duration in the CSS
+      }, 1500); // Match the transition duration in the CSS
 
   return (
     <div>
