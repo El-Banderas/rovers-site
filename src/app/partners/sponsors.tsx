@@ -30,7 +30,7 @@ export default function Sponsors() {
       </div>
       <div className={styles.sponsorsTable}>
         {sponsors[selectedLevel]["partners"].map(sponsor => (
-          <div className={styles.sponsor}  onClick={() => window.location.replace(sponsor.url)} style={{ cursor: 'pointer' }}>
+          <div key={sponsor.name} className={styles.sponsor}  onClick={() => window.location.replace(sponsor.url)} style={{ cursor: 'pointer' }}>
             <Image
               src={sponsor.image}
               alt={sponsor.name}
