@@ -4,6 +4,8 @@ import React, { useState, useMemo } from 'react';
 import styles from './scroll.module.css'
 import Image from "next/image";
 
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import {partners} from './partners'
 
 export default function HorizontalScroll() {
@@ -35,11 +37,9 @@ export default function HorizontalScroll() {
   }
 
   return <div className={styles.scroll}>
-<div onClick={decrementIdx}>
-  Esq
-</div>
+  <ArrowLeftIcon sx={{ fontSize: 60 }}  onClick={incrementIdx} />
       {visiblePartners.map(partner =>
-        <div key={partner.name}  className={styles.partner} data-aos={direction}>
+        <div key={partner.name}  className={styles.partner} data-aos={direction} onClick={() => window.location.replace(partner.url)} style={{ cursor: 'pointer' }}>
  <Image
         src={partner.image}
         alt={partner.name}
@@ -53,8 +53,6 @@ export default function HorizontalScroll() {
         </div>
       )
       }
-<div onClick={incrementIdx}>
-Dir
-</div>
+<ArrowRightIcon sx={{ fontSize: 60 }}  onClick={decrementIdx} />
     </div>;
 }

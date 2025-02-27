@@ -7,6 +7,12 @@ const nextConfig = {
 async redirects() {
   return [
     {
+      source: '/google',
+      destination: 'www.google.com',
+      permanent: false,
+      basePath: false
+    },
+    {
       source: '/instagram',
       destination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
       permanent: false,

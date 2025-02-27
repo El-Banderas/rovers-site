@@ -3,41 +3,44 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import styles from './sponsors.module.css'
 import next from 'next';
+import Image from "next/image";
 
-// https://codepen.io/hanahina/pen/xxZgXqE
-/*
-Ou meter a animação a aparecer/desaparecer, e metê-los juntinhos para parecer que é transição
-E não aparecer e desaparecer :) 
-*/
-export default function Sponsors () {
-  const [items, setItems] = useState<number[]>([1, 2, 3, 4, 5]);
-  
+import { partners, sponsors } from './partners'
 
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+export default function Sponsors() {
+  const levels = Object.keys(sponsors)
+  const [selectedLevel, setSelectedLevel] = useState<string>(levels[0]);
 
-  const nextItem = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  const clickLevel = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    setSelectedLevel(event.currentTarget.innerText.toLowerCase());
   };
-
-  const prevItem = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
-  };
-
-  const cachedValue = useMemo(() => [prevItem(), items[currentIndex], nextItem()], [currentIndex])
-   setTimeout(() => {
-    setCurrentIndex((old) => old+1)
-      }, 1500); // Match the transition duration in the CSS
-
   return (
-    <div>
-      <button>Remove Item</button>
+    <div className={styles.box}>
+
       <div className={styles.listContainer}>
-        {items.map((item) => (
-          <div
-            key={item}
-            className={`${styles.item} ${item === currentIndex-2  ? styles.removing : ''}`}
+        {levels.map((level) => (
+          <h3
+            key={level}
+            className={`${styles.item} ${styles[level]} ${level === selectedLevel ? styles.removing : ''}`}
+            onClick={clickLevel}
           >
-            {item}
+            {level}
+          </h3>
+        ))}
+      </div>
+      <div className={styles.sponsorsTable}>
+        {sponsors[selectedLevel]["partners"].map(sponsor => (
+          <div className={styles.sponsor}  onClick={() => window.location.replace(sponsor.url)} style={{ cursor: 'pointer' }}>
+            <Image
+              src={sponsor.image}
+              alt={sponsor.name}
+              width={70}
+              height={70}
+            />
+            <h2
+            >
+              {sponsor.name}
+            </h2>
           </div>
         ))}
       </div>
