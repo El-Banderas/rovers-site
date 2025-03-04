@@ -29,6 +29,7 @@ export default function Chapter ({title, content}: { title : string, content : I
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id={`chapter-${title}`}
+          className={styles.accordionHeader}
         >
           <div>{title}</div>
         </AccordionSummary>
