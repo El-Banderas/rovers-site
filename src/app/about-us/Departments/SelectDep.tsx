@@ -25,6 +25,8 @@ export default function SelectDpt() {
     return 'none'
   }
   return <div className={styles.selectDpt}>
+
+    <h1 className={styles.titleDepartments}>Departments</h1>
     <div className={styles.selectDptBtns}>
       {departmentsTitles.map(title =>
 

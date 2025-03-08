@@ -11,8 +11,8 @@ export interface Department {
   people: Person[]
 }
 export const departments : {[depName : string] : Department;} = {
-   "Mechanics Department" : {
-        "title": "Mechanics Department",
+   "Mechanics" : {
+        "title": "Mechanics",
         "responsabilities": [
             "Responsible for the dynamics, kinematics, simulation and development of the robotic arm;",
             "Focus on the mechanical and structural design of the robotic explorers (chassis & suspension);",
@@ -41,8 +41,8 @@ export const departments : {[depName : string] : Department;} = {
         }]
     },
     
-        "Eletronics Department": {
-        "title": "Eletronics Department",
+        "Eletronics": {
+        "title": "Eletronics",
         "responsabilities": [
             "Integration and development of electronics, CAD designs and sensor systems;",
             "Responsible for the rover's power suppliage;",
@@ -53,9 +53,9 @@ export const departments : {[depName : string] : Department;} = {
             "photo": person
         }]
     },
-        "Software Department" :
+        "Software" :
     {
-        "title": "Software Department",
+        "title": "Software",
         "responsabilities": [
             "Responsible for the low-level embedded software, RTOS integration, data filtering and estimation;",
 "Creation of simulation environments, HMI applications, the robotic middleware and some conceptual art, if needed;",
@@ -86,9 +86,9 @@ export const departments : {[depName : string] : Department;} = {
     ]
     },
 
-        "Business Department":
+        "Business":
 {
-        "title": "Business Department",
+        "title": "Business",
         "responsabilities": [
 "Management of the organization’s budget, financial planning and resource allocation;",
 "Handling the organization’s online presence, public relations and partnerships.",

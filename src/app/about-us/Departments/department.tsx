@@ -42,7 +42,7 @@ const persons = others.map(person =>
       />
       <div className={styles.personDescription}>
         <h2 className={styles.headName}>{director.name}</h2>
-        <p className={styles.subtitle}>Department Coordinator</p>
+        <p className={styles.subtitle}>Head of Department</p>
       </div>
       <div className={styles.description}>
         <ul>
