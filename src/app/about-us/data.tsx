@@ -129,10 +129,10 @@ export interface IChapter {
   points?: string[]
   pointsWHeaders?: string[][]
 }
+
+export const firstText = "Taurus Space is a youth-driven team dedicated to undertaking projects aimed at competition and/or research and investigation. Our mission extends beyond creating physical projects related to autonomous systems for space and defense; we can also tackle conceptual projects that push the boundaries of innovation and technology. By engaging in both practical and theoretical work, we aim to foster a comprehensive understanding of advanced systems among our members, preparing them for future challenges in the aerospace and defense industries."
+
 export const texts : { [title: string] : IChapter; } = {
-    "???": {
-        "text" : "Taurus Space is a youth-driven team dedicated to undertaking projects aimed at competition and/or research and investigation. Our mission extends beyond creating physical projects related to autonomous systems for space and defense; we can also tackle conceptual projects that push the boundaries of innovation and technology. By engaging in both practical and theoretical work, we aim to foster a comprehensive understanding of advanced systems among our members, preparing them for future challenges in the aerospace and defense industries.",
-    },
     "Objectives": {
         "text": "Our team aims to fully develop, build, and deploy autonomous systems for space and defense applications. Our flagship project is a rover, named Zenith, which we aim to complete in 2 years. Throughout the development of our robotic systems, we intend to publish papers and articles regarding our approaches and considerations. We aim to participate in international competitions as well as use our products for field tests.",
     },

@@ -1,5 +1,6 @@
 
 .accordions{
+    padding-top: 5%;
     margin: auto;
   width: 70%;
 }
@@ -8,11 +9,21 @@
     padding-bottom: 2%;
 }
 .accordionHeader{
-  background-color: whitesmoke;
+  font-weight: bold;
 }
 .accordionText{
     text-indent: 50px;
-  text-align: justify;
+    text-align: justify;
+}
+
+.bulletPoints{
+    text-indent: 5px;
+}
+.horizonalLine{
+    border: none;
+  height: 1px;
+  background-color: #c4c4c4; 
+  margin-top: 0;
 }
 
 @media (max-width: 768px),

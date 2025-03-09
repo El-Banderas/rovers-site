@@ -24,20 +24,22 @@ export default function Chapter ({title, content}: { title : string, content : I
 ));
 
   return <div className={styles.accordion}>
-    <Accordion>
+    <Accordion disableGutters>
+          
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id={`chapter-${title}`}
           className={styles.accordionHeader}
         >
-          <div>{title}</div>
+          <div >{title}</div>
         </AccordionSummary>
+          <hr className={styles.horizonalLine}/>
         <AccordionDetails>
           <div className={styles.accordionText}>
         {content.text}
-         {list && <ul>{list}</ul>}
-         {listWHeaders && <ul>{listWHeaders}</ul>}
+         {list && <ul className={styles.bulletPoints}>{list}</ul>}
+         {listWHeaders && <ul className={styles.bulletPoints}>{listWHeaders}</ul>}
 </div>
         </AccordionDetails>
       </Accordion>
