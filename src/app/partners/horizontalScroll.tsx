@@ -40,7 +40,7 @@ export default function HorizontalScroll() {
   return <div className={styles.scroll}>
   <ArrowLeftIcon sx={{ fontSize: 60 }}  onClick={incrementIdx} />
       {visiblePartners.map(partner =>
-        <PartnerBox direction={direction} partner={partner} />
+        <PartnerBox key={partner.name} direction={direction} partner={partner} />
       )
       }
 <ArrowRightIcon sx={{ fontSize: 60 }}  onClick={decrementIdx} />

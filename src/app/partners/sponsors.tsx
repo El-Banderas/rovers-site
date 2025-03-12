@@ -14,7 +14,7 @@ export default function Sponsors() {
     <div className={styles.box}>
 
         { Object.entries(sponsors).map(([level, listPartners]) => {
-        return <div className={styles.level} data-aos='zoom-in'>
+        return <div key={level} className={styles.level} data-aos='zoom-in'>
           <h3
             key={level}
             className={`${styles.item} ${styles[level]}` }
@@ -22,7 +22,7 @@ export default function Sponsors() {
             {level}
           </h3>
           <div className={styles.partnersRow}>
-           {listPartners.partners.map(partner => <PartnerBox partner={partner} /> )}
+           {listPartners.partners.map(partner => <PartnerBox key={partner.name} partner={partner} /> )}
           </div>
           </div>
         })
