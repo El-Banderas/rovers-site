@@ -10,9 +10,9 @@ align-items: center;
 
 .partner{
       border: 1px solid lightgray;
-    float: left;
     padding: 10px;
     box-shadow: 0 0 10px #888;
+  width: fit-content;
 }
 .partnerName{
 text-align: center;

@@ -5,45 +5,29 @@ import styles from './sponsors.module.css'
 import next from 'next';
 import Image from "next/image";
 
-import { partners, sponsors } from './partners'
+import { sponsors, Partner } from './partners'
+import PartnerBox from './partnerBox';
 
 export default function Sponsors() {
-  const levels = Object.keys(sponsors)
-  const [selectedLevel, setSelectedLevel] = useState<string>(levels[0]);
 
-  const clickLevel = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    setSelectedLevel(event.currentTarget.innerText.toLowerCase());
-  };
   return (
     <div className={styles.box}>
 
-      <div className={styles.listContainer}>
-        {levels.map((level) => (
+        { Object.entries(sponsors).map(([level, listPartners]) => {
+        return <div className={styles.level} data-aos='zoom-in'>
           <h3
             key={level}
-            className={`${styles.item} ${styles[level]} ${level === selectedLevel ? styles.removing : ''}`}
-            onClick={clickLevel}
+            className={`${styles.item} ${styles[level]}` }
           >
             {level}
           </h3>
-        ))}
-      </div>
-      <div className={styles.sponsorsTable}>
-        {sponsors[selectedLevel]["partners"].map(sponsor => (
-          <div key={sponsor.name} className={styles.sponsor}  onClick={() => window.location.replace(sponsor.url)} style={{ cursor: 'pointer' }}>
-            <Image
-              src={sponsor.image}
-              alt={sponsor.name}
-              width={70}
-              height={70}
-            />
-            <h2
-            >
-              {sponsor.name}
-            </h2>
+          <div className={styles.partnersRow}>
+           {listPartners.partners.map(partner => <PartnerBox partner={partner} /> )}
           </div>
-        ))}
-      </div>
+          </div>
+        })
+      }
+     
     </div>
   );
 };

@@ -7,6 +7,7 @@ import Image from "next/image";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import {partners} from './partners'
+import PartnerBox from './partnerBox'
 
 export default function HorizontalScroll() {
   
@@ -39,18 +40,7 @@ export default function HorizontalScroll() {
   return <div className={styles.scroll}>
   <ArrowLeftIcon sx={{ fontSize: 60 }}  onClick={incrementIdx} />
       {visiblePartners.map(partner =>
-        <div key={partner.name}  className={styles.partner} data-aos={direction} onClick={() => window.location.replace(partner.url)} style={{ cursor: 'pointer' }}>
- <Image
-        src={partner.image}
-        alt={partner.name}
-        width={170}
-        height={170}
-      />
-
-          <div className={styles.partnerName}>
-            {partner.name}
-        </div>
-        </div>
+        <PartnerBox direction={direction} partner={partner} />
       )
       }
 <ArrowRightIcon sx={{ fontSize: 60 }}  onClick={decrementIdx} />

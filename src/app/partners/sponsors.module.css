@@ -1,39 +1,25 @@
 
 .box {
   display: flex;
-  margin-top: 5%;
-  width: 80%;
-  height: 40%;
-}
-.listContainer {
-  display: flex;
   flex-direction: column;
-  justify-content: left;
-  width: 20%;
-  gap: 0px;
-  margin-left: 5%;
-  height: 100%;
+  margin-top: 5%;
+  padding-bottom: 5%;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
 }
 
+.level{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 .item {
-   display: inline-block;
-  padding: 20px;
-  margin-top: 0px;
-  margin-bottom: 0px;
   text-align: center;
    text-transform: capitalize;
-     transition: all 0.3s ease;
-     background-color: #d4d4d4;
-     color: #0C0C0C;
-     flex-grow: 1;
-
-  font-weight:normal;
+  font-weight:bold;
 }
 
-.item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+
 
 .gold {
   color: #ffd000;
@@ -49,23 +35,9 @@
     color: #a44200; 
 }
 
-.removing{
-  font-weight: bolder;
-  background-color: #707070;
-}
-.sponsorsTable {
-  background-color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  gap: 0px;
-
-}
-.sponsor{
-  flex-grow: 1;
+.partnersRow{
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  margin-left: 5%;
-  gap: 10%;
+  justify-content: center;
+  gap: 5%;
 }

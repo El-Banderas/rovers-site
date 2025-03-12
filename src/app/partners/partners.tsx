@@ -42,6 +42,7 @@ export interface SponsorInfo {
     color: string;
     partners: Partner[];
 }
+
 export const sponsors: { [level: string]: SponsorInfo } = {
     "gold": {
         color: "yellow",
