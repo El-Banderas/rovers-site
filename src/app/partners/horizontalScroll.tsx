@@ -18,8 +18,9 @@ export default function HorizontalScroll() {
   const [direction, setDirection] = useState<string>('fade-left');
 
   useEffect(() => {
-    console.log(typeof window)
     setIsMobile(checkIsMobile(window))
+    console.log("???")
+    console.log(checkIsMobile(window))
   }, []
   );
 
@@ -31,6 +32,8 @@ export default function HorizontalScroll() {
       const previous = idx == 0 ? partners[length - 1] : partners[(idx-1) % length];  
       const current = partners[idx % length];
       const next = partners[(idx+1) % length]
+      console.log("Before return")
+      console.log(isMobile)
       if (isMobile) return [current]
       else return [previous, current, next]
     },
