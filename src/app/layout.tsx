@@ -6,6 +6,7 @@ import Footer from "./CommonComponents/Footer/Footer";
 import { AOSInit } from './aos'
 
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,7 +27,6 @@ export default function RootLayout({
 {children}
 <Footer />
 </body>
-
     </html>
   );
 }

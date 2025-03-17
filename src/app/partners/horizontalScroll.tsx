@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import styles from './scroll.module.css'
 import Image from "next/image";
 
@@ -8,12 +8,21 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import {partners} from './partners'
 import PartnerBox from './partnerBox'
+import { checkIsMobile } from '../utils/isMobile';
 
 export default function HorizontalScroll() {
   
 
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const [idxPartner, setIdxPartner] = useState<number>(0);
   const [direction, setDirection] = useState<string>('fade-left');
+
+  useEffect(() => {
+    console.log(typeof window)
+    setIsMobile(checkIsMobile(window))
+  }, []
+  );
+
 
     const visiblePartners = useMemo(
     () => {
@@ -22,7 +31,8 @@ export default function HorizontalScroll() {
       const previous = idx == 0 ? partners[length - 1] : partners[(idx-1) % length];  
       const current = partners[idx % length];
       const next = partners[(idx+1) % length]
-      return [previous, current, next]
+      if (isMobile) return [current]
+      else return [previous, current, next]
     },
     [idxPartner]
   );

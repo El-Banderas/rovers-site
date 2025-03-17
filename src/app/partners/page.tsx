@@ -8,7 +8,7 @@ import Sponsors from './sponsors';
 
 export default function Page() {
 
-  const [option, setOption] = useState<string>("Sponsors");
+  const [option, setOption] = useState<string>("Partners");
 
   function selectOption(selected: string) {
     setOption(selected)
