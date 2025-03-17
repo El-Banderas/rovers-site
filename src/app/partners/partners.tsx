@@ -88,12 +88,12 @@ export const sponsors: { [level: string]: SponsorInfo } = {
             "image": partner2
         },
 {
-            "name": "S4",
+            "name": "S6",
             "url": url,
             "image": partner1
         },
         {
-            "name": "S5",
+            "name": "S7",
             "url": url,
             "image": partner2
         },

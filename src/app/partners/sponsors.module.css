@@ -41,3 +41,11 @@
   justify-content: center;
   gap: 5%;
 }
+
+@media (max-width:1025px) {
+.partnersRow{
+flex-direction: column;
+align-items: center;
+gap:4vh;
+}
+}

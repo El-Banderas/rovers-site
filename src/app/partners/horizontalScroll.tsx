@@ -11,7 +11,6 @@ import PartnerBox from './partnerBox'
 import { checkIsMobile } from '../utils/isMobile';
 
 export default function HorizontalScroll() {
-  
 
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [idxPartner, setIdxPartner] = useState<number>(0);
