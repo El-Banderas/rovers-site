@@ -12,7 +12,6 @@ export default function Page() {
 
   function selectOption(selected: string) {
     setOption(selected)
-    console.log(selected)
   }
   return <div className={styles.content}>
     <h1 className={styles.title}>
