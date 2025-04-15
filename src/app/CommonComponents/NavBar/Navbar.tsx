@@ -60,12 +60,16 @@ export default function NavBar(props: Props) {
 
   const pageNameToURL: { [pageName: string]: string; } = {
     "News": "/news",
-    "Projects": "/coming-soon",
+    "Projects": "/projects2",
     "Partners": "/partners",
     "About us": "/about-us",
   }
 
   const convertPageNameURL = (pageName: string) => {
+
+      console.log("???")
+      console.log(pageName)
+      console.log(pageNameToURL[pageName])
     if (pageNameToURL[pageName] !== undefined) {
       return pageNameToURL[pageName]
     }
