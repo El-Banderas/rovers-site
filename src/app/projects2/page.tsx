@@ -5,6 +5,7 @@ import styles from './styles.module.css'
 import Images from './Images/Images'
 import { departments } from "./data"
 import RowBtns from '@/app/CommonComponents/RowBtns.tsx/RowBtns';
+import Department from '@/app/projects2/Department';
 
 export default function Page() {
     
@@ -22,6 +23,7 @@ export default function Page() {
     <div className={styles.departments}>
    <RowBtns departmentsTitles={departmentsTitles} selectedDPT={selectedDpt} selectDPT={selectDPT} />
     </div>
+    <Department department={departments[selectedDpt]}/>
 
     </div>;
 }
