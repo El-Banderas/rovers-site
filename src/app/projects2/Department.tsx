@@ -1,11 +1,17 @@
-import { PhaseListProps  } from "./data";
+import { Phase, PhaseListProps  } from "./data";
+import PhaseInfo from './Phase/PhaseInfo'
 
-export default function Department({department} : PhaseListProps) {
-    console.log("???")
-    console.log(department)
+interface IDepartment {
+    department : PhaseListProps
+} 
+
+export default function Department(props : IDepartment) {
   return <div>
-        Department
-        {department["phases"][0]["name"]}
+        {
+            props.department.phases.map((phase :Phase ) => (
+                <PhaseInfo key={phase.name} phase={phase} />
+            ))
+        }
         
     </div>;
 }

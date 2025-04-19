@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import rocket from '/public/rocket.jpeg'
 
-interface Phase {
+export interface Phase {
   name: string;
   progression: number;
   image?: any; // assuming image is a URL
@@ -16,7 +16,7 @@ export interface PhaseListProps {
 const genericListPhases : PhaseListProps = {"phases": [
         {
             "name" : "phase 1",
-            "progression" : 75,
+            "progression" : 25,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut ipsum hendrerit, rhoncus neque sed, tincidunt velit. Sed ultricies a felis quis facilisis. Sed a libero nec augue pharetra consequat."
         },
         {
@@ -27,7 +27,7 @@ const genericListPhases : PhaseListProps = {"phases": [
         },
         {
             "name" : "phase 3",
-            "progression" : 75,
+            "progression" : 85,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut ipsum hendrerit, rhoncus neque sed, tincidunt velit. Sed ultricies a felis quis facilisis. Sed a libero nec augue pharetra consequat."
         }
     ]    
