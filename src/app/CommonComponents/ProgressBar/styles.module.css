@@ -1,0 +1,22 @@
+.barWNumber{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 5%;
+    gap: 4%;
+}
+.progressBarBorder{
+      border-left: 2px solid black;  /* Left border */
+      border-right: 2px solid black;  /* Left border */
+      height: 10px;
+      flex-grow: 4;
+}
+
+.progressBar{
+  height: 2px;
+  top: 40%;
+      flex-grow: 1;
+}
+.progressionText{
+      text-align: center;
+}
