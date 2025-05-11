@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import rocket from '/public/rocket.jpeg'
+import chassis from '/public/chassi.png'
 
 export interface Phase {
   name: string;
@@ -12,7 +13,25 @@ export interface Phase {
 export interface PhaseListProps {
   phases: Phase[];
 }
-
+const mechanicsPhases : PhaseListProps = {"phases": [
+        {
+            "name" : "Chassis",
+            "progression" : 70,
+            "image": chassis,
+            "description": "Using slot t-bars, because they are widely available on the market, are light and capable of supporting the necessary loads. Also, the design of the wheel is being decided, based on simulations.",
+        },
+        {
+            "name" : "Arm",
+            "progression" : 65,
+            "description": "SomethingWe are analyzing the claw in detail and will then move on to an analysis of the reduction systems needed for correct operation, using motors that are weaker in terms of torque and cheaper too."
+        },
+        {
+            "name" : "Drill",
+            "progression" : 0,
+            "description": "On hold, waiting for the science department to decide between the best options: Suction solution, such as a suction cup; Archimedes screw system"
+        },
+      ]
+    }
 const genericListPhases : PhaseListProps = {"phases": [
         {
             "name" : "phase 1",
@@ -34,7 +53,7 @@ const genericListPhases : PhaseListProps = {"phases": [
 }
 
 export const departments : {[depName : string] : PhaseListProps ;} = {
-   "Mechanics" : genericListPhases,
+   "Mechanics" : mechanicsPhases,
    "Eletronics" : genericListPhases,
    "Software" : genericListPhases,
 }
