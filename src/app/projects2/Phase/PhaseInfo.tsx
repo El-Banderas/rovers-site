@@ -18,7 +18,7 @@ export default function Department(props : IPhase) {
 <Image
       src={props.phase.image}
       style={{
-        width: '100%',
+        width: '70%',
         height: 'auto',
       }}
       alt={props.phase.name}

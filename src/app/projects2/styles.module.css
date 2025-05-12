@@ -1,4 +1,9 @@
-
+.gap{
+  display: flex;
+  flex-direction: column;
+gap: 5px;
+}
+ 
 .title{
   padding-left: 1%;
   text-align: center;

@@ -18,17 +18,27 @@ const mechanicsPhases : PhaseListProps = {"phases": [
             "name" : "Chassis",
             "progression" : 70,
             "image": chassis,
-            "description": "Using slot t-bars, because they are widely available on the market, are light and capable of supporting the necessary loads. Also, the design of the wheel is being decided, based on simulations.",
+            "description": `
+             We decided to use slot T-bars due to their wide availability in the market, their lightweight nature, and their ability to support the required loads. 
+             To protect the suspension, we decided to use a system with the differential inside the chassis.
+             Additionally, the design of the wheels is currently under evaluation, considering the simulation results.
+            `,
         },
         {
             "name" : "Arm",
-            "progression" : 65,
-            "description": "SomethingWe are analyzing the claw in detail and will then move on to an analysis of the reduction systems needed for correct operation, using motors that are weaker in terms of torque and cheaper too."
+            "progression" : 45,
+            "description": `
+            We are analyzing the claw in detail, considering many available options, and the main objective is hold objects.
+            The main restriction relative to the arm is the lower motor power.
+            `
         },
         {
             "name" : "Drill",
-            "progression" : 0,
-            "description": "On hold, waiting for the science department to decide between the best options: Suction solution, such as a suction cup; Archimedes screw system"
+            "progression" : 10,
+            "description": `
+            The drill development is on hold, because we are waiting for the science department to decide between the best options: 
+            suction solution, such as a suction cup, 
+            or an archimedes screw system.`
         },
       ]
     }
