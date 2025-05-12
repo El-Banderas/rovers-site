@@ -17,10 +17,7 @@ export default function Department(props : IPhase) {
                     "image" in props.phase && (
 <Image
       src={props.phase.image}
-      style={{
-        width: '70%',
-        height: 'auto',
-      }}
+      className={styles.phaseImage}
       alt={props.phase.name}
     />
                     )

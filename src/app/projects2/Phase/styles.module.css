@@ -12,6 +12,7 @@
 
 .phaseName {
     margin:0;
+    white-space:nowrap;
 }
 
 .left{
@@ -27,3 +28,23 @@
   flex-direction: column;
 }
 
+.phaseImage{
+    width: 80%;
+    height: auto;
+}
+@media (max-width: 768px),
+(max-height: 500px) {
+    .phase {
+      flex-direction: column;
+      align-items: center;
+    }
+
+.left{
+      align-items: center;
+}
+.phaseImage{
+    width: 320%;
+    height: auto;
+}
+  
+  }
