@@ -19,7 +19,7 @@
     bottom: 11px;
     left: 50%; 
     width: 90%; 
-    height: 0.01em;
+    height: 1px;
     background-color: white;  
     transform: translateX(-50%) scaleX(0); 
     transform-origin: bottom center;
