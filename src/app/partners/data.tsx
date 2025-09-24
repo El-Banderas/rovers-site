@@ -4,6 +4,10 @@ import NEEEICUM from '/public/partners/neeeicum.png'
 import MESCC from '/public/partners/MESCC.jpg'
 import N_EC from '/public/partners/N3EC.jpeg'
 
+import Mauser from '/public/sponsors/Mauser.png'
+import Norelem from '/public/sponsors/Norelem.png'
+import PORMECALU from '/public/sponsors/PORMECALU.png'
+
 const type = new Set<string>(['partners', 'sponsors']);
 
 export interface Partner {
@@ -41,34 +45,28 @@ export interface SponsorInfo {
 }
 
 export const sponsors: { [level: string]: SponsorInfo } = {
-    "gold": {
+    "Horizon": {
         color: "yellow",
         partners: [
             {
-                "name": "S1",
-                "url": url,
-                "image": NEEEICUM
+                "name": "Robert Mauser",
+                "url": "https://mauser.pt/",
+                "image": Mauser
             },
             {
-                "name": "S2",
-                "url": url,
-                "image": NEEEICUM
+                "name": "Norelem",
+                "url": "https://norelem.es/pt/",
+                "image": Norelem
             },
         ]
     },
-    "silver": {
-        
+    "Meridian": {
         color: "grey",
         partners: [
         {
-            "name": "S3",
-            "url": url,
-            "image": NEEEICUM
-        },
-        {
-            "name": "S4",
-            "url": url,
-            "image": N_EC
+            "name": "PORMECALU",
+            "url": "https://pormecalu.com/",
+            "image": PORMECALU
         },
     ]},
     "bronze": {
@@ -79,20 +77,6 @@ export const sponsors: { [level: string]: SponsorInfo } = {
             "url": url,
             "image": NEEEICUM
         },
-        {
-            "name": "S5",
-            "url": url,
-            "image": N_EC
-        },
-{
-            "name": "S6",
-            "url": url,
-            "image": NEEEICUM
-        },
-        {
-            "name": "S7",
-            "url": url,
-            "image": N_EC
-        },
+
     ]}
 }
