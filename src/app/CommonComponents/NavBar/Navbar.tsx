@@ -58,7 +58,6 @@ export default function NavBar(props: Props) {
   const pathname = usePathname()
 
   const pageNameToURL: { [pageName: string]: string; } = {
-    "News": "/news",
     "Projects": "/projects2",
     "Partners": "/partners",
     "About us": "/about-us",

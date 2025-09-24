@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
-import {partners} from './partners'
+import {partners} from './data'
 import PartnerBox from './partnerBox'
 import { checkIsMobile } from '../utils/isMobile';
 

@@ -1,6 +1,8 @@
 
-import partner1 from '/public/partner1.jpg'
-import partner2 from '/public/partner2.png'
+import FADJP from '/public/partners/FADJP.png'
+import NEEEICUM from '/public/partners/neeeicum.png'
+import MESCC from '/public/partners/MESCC.jpg'
+import N_EC from '/public/partners/N3EC.jpeg'
 
 const type = new Set<string>(['partners', 'sponsors']);
 
@@ -12,30 +14,25 @@ export interface Partner {
 const url = "https://www.google.com"
 export const partners: Partner[] = [
     {
-        "name": "P1",
-        "url": url,
-        "image": partner1
+        "name": "FADJP",
+        "url": "https://fajdp.pt/",
+        "image": FADJP
     },
     {
-        "name": "P2",
-        "url": url,
-        "image": partner2
+        "name": "NEEEICUM",
+        "url": "https://neeeicum.dei.uminho.pt/",
+        "image": NEEEICUM,
     },
     {
-        "name": "P3",
-        "url": url,
-        "image": partner1
+        "name": "MESCC",
+        "url": "https://www.linkedin.com/company/mescc-isep/",
+        "image": MESCC
     },
     {
-        "name": "P4",
-        "url": url,
-        "image": partner2
+        "name": "N3EC",
+        "url": "https://n3ec.dee.isep.ipp.pt/",
+        "image": N_EC,
     },
-    {
-        "name": "P5",
-        "url": url,
-        "image": partner1
-    }
 ]
 
 export interface SponsorInfo {
@@ -50,12 +47,12 @@ export const sponsors: { [level: string]: SponsorInfo } = {
             {
                 "name": "S1",
                 "url": url,
-                "image": partner1
+                "image": NEEEICUM
             },
             {
                 "name": "S2",
                 "url": url,
-                "image": partner2
+                "image": NEEEICUM
             },
         ]
     },
@@ -66,12 +63,12 @@ export const sponsors: { [level: string]: SponsorInfo } = {
         {
             "name": "S3",
             "url": url,
-            "image": partner1
+            "image": NEEEICUM
         },
         {
             "name": "S4",
             "url": url,
-            "image": partner2
+            "image": N_EC
         },
     ]},
     "bronze": {
@@ -80,22 +77,22 @@ export const sponsors: { [level: string]: SponsorInfo } = {
         {
             "name": "S4",
             "url": url,
-            "image": partner1
+            "image": NEEEICUM
         },
         {
             "name": "S5",
             "url": url,
-            "image": partner2
+            "image": N_EC
         },
 {
             "name": "S6",
             "url": url,
-            "image": partner1
+            "image": NEEEICUM
         },
         {
             "name": "S7",
             "url": url,
-            "image": partner2
+            "image": N_EC
         },
     ]}
 }

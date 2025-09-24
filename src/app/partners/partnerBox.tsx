@@ -2,7 +2,7 @@
 
 import styles from './scroll.module.css'
 import Image from "next/image";
-import { Partner } from './partners'
+import { Partner } from './data'
 
 
 interface PartnerBoxProps {
@@ -11,7 +11,7 @@ interface PartnerBoxProps {
 }
 
 export default function PartnerBox(props: PartnerBoxProps ) {
-  return <div key={props.partner.name} className={styles.partner} data-aos={props.direction} onClick={() => window.location.replace(props.partner.url)} style={{ cursor: 'pointer' }}>
+  return <div key={props.partner.name} className={styles.partner} data-aos={props.direction} onClick={() => window.open(props.partner.url, '_blank')} style={{ cursor: 'pointer' }}>
     <Image
       src={props.partner.image}
       alt={props.partner.name}

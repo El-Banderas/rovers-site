@@ -5,7 +5,7 @@ import styles from './sponsors.module.css'
 import next from 'next';
 import Image from "next/image";
 
-import { sponsors, Partner } from './partners'
+import { sponsors, Partner } from './data'
 import PartnerBox from './partnerBox';
 
 export default function Sponsors() {
