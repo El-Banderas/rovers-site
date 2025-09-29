@@ -43,7 +43,7 @@ const mechanicsPhases: PhaseListProps = {
         },
 
         {
-            "name": "Drill",
+            "name": "Another",
             "progression": 50,
             "description": `
             Missing.

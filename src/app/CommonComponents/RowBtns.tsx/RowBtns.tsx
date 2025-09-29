@@ -16,16 +16,11 @@ export default function RowBtns({ departmentsTitles, selectedDPT, selectDPT }: R
   }
 
   return (
- <div className={styles.selectDptBtns}>
-      {departmentsTitles.map(title =>
-
-        <Button onClick={() => selectDPT(title)} key={title} className={styles.btnDpt}
-          sx={{ textDecoration: isUnderlined(title) }}
-        >{title}</Button>
-      )
-
-      }
-    </div>
+<ul className={styles.myList}>
+  <div className={styles.blackBox} ><li><a href="#" >Welcome to my website</a></li></div>
+  <div className={styles.blackBox} ><li className={styles.underlined}><a href="#" >Welcome to my website</a></li></div>
+  <div className={styles.blackBox} ><li><a href="#"> Welcome to my website</a></li></div>
+</ul>
   );
 
 }
