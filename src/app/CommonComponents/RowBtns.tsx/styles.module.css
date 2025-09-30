@@ -46,8 +46,8 @@ ul.myList li a:hover {
 .blackBox{
   padding-bottom: 4px;
   background-color: black;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 ul.myList li.underlined:after {
   width: 100%;
