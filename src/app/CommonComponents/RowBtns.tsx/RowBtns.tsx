@@ -18,7 +18,7 @@ export default function RowBtns({ departmentsTitles, selectedDPT, selectDPT }: R
 <ul className={styles.myList}>
   {departmentsTitles.map(
     title => 
-  <div className={styles.blackBox} onClick={() => selectDPT(title)} key={title}><li className={isUnderlined(title)}><a href="#" >{title}</a></li></div>
+  <div className={styles.blackBox} onClick={() => selectDPT(title)} key={title}><li className={isUnderlined(title)}><a >{title}</a></li></div>
   )}
 </ul>
   );
