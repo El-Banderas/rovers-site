@@ -1,23 +1,17 @@
 'use client'
 import styles from './styles.module.css'
 import Image from 'next/image'
-import rocket from '/public/rocket.jpeg'
+import zenith_logo from '/public/zenith_logo.png'
 
 export default function Images() {
-  const images = [rocket, rocket, rocket]
   return <div className={styles.line}>
-      {
-        images.map((image, idx) => (
      <Image
-      src={image}
-      key={idx}
+      src={zenith_logo}
       style={{
         width: '20%',
         height: 'auto',
       }}
       alt="Project 1"
     />      
-        ))
-      }
   </div>;
 }

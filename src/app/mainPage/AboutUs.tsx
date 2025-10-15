@@ -15,9 +15,9 @@ export default function AboutUs() {
     <div className={styles.aboutUsContent}>
       <div className={styles.text}>
         <h3>
-          Taurus Space is a youth association passionate about development of space and military technologies.<br/>
+          Taurus Space is a youth association passionate about development of space technologies.<br/>
 We aim to inspire, innovate, and collaborate to push the boundaries of what young engineers can achieve. <br/>
-Our focus is on mobile robotic and autonomous systems, a highly specialized field where we stand out as pioneers among youth organizations.<br/>
+Our focus is on mobile robotic and autonomous systems, a highly specialized field where we stand out as pioneers among portuguese youth organizations.<br/>
 <p/>
 In other words: we are <strong>UNIQUE</strong>!
 

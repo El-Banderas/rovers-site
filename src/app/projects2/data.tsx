@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import rocket from '/public/rocket.jpeg'
 import chassis from '/public/chassi.png'
 
 export interface Phase {
@@ -89,6 +88,6 @@ export const departments: { [depName: string]: PhaseListProps; } = {
 }
 
 export const description = `
-Our current project is the rover xxx, that will be used in contests. It's construction is divided by some departments.
-Some parts are awaiting for supplies from our partners and sponsors.
+Our current project is the rover Zenith, that will be used in competitions. It's construction is structured in several stages.
+Some stages have pending supplies from our partners and sponsors.
 `

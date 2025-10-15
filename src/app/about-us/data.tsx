@@ -130,7 +130,7 @@ export interface IChapter {
   pointsWHeaders?: string[][]
 }
 
-export const firstText = "Taurus Space is a youth-driven team dedicated to undertaking projects aimed at competition and/or research and investigation. Our mission extends beyond creating physical projects related to autonomous systems for space and defense; we can also tackle conceptual projects that push the boundaries of innovation and technology. By engaging in both practical and theoretical work, we aim to foster a comprehensive understanding of advanced systems among our members, preparing them for future challenges in the aerospace and defense industries."
+export const firstText = "Taurus Space is a youth-driven team dedicated to undertaking projects aimed at competition and/or research and investigation. Our mission extends beyond creating physical projects related to autonomous systems for space; we can also tackle conceptual projects that push the boundaries of innovation and technology. By engaging in both practical and theoretical work, we aim to foster a comprehensive understanding of advanced systems among our members, preparing them for future challenges in the aerospace industries."
 
 export const texts : { [title: string] : IChapter; } = {
     "Objectives": {
@@ -152,7 +152,7 @@ export const texts : { [title: string] : IChapter; } = {
         "pointsWHeaders" : [
             ["Professionalism", " We uphold the highest standards of professionalism in every aspect of our work, ensuring reliability and integrity."],
             ["Excellence", " We strive for excellence in all our endeavors, pushing the boundaries of what is possible."],
-            ["Prestige", " Being the only Portuguese team focused on building autonomous systems for space and defense, our ambition drives us to explore new frontiers and achieve groundbreaking innovations."],
+            ["Prestige", " Being the only Portuguese team focused on building space autonomous systems, our ambition drives us to explore new frontiers and achieve groundbreaking innovations."],
             ["Commitment", " We believe in the power of collaboration and compromise, working together to reach our common goals."],
             ["Robustness", " Our focus on robustness ensures that our solutions are resilient, reliable, and capable of withstanding any challenge without fail."],
         ]

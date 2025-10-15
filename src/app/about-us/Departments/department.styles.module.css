@@ -26,7 +26,10 @@
 .description{
     padding-left: 5%;
 }
+.responsability{
+    padding-bottom: 5%;
 
+}
 .persons{
     display: flex;
     flex-direction: row;
