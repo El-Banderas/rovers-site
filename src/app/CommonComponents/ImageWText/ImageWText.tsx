@@ -19,7 +19,6 @@ export default function ImageWText ({ image, title, description }: ImageWTextPro
               alt="Rover img"
               className={styles.vercelLogo}
               priority
-              placeholder="blur"
             />
   <h1 className={styles.title}>{title}</h1>
   <h4 className={styles.description}>{description}</h4>
