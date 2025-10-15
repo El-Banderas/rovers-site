@@ -1,24 +1,23 @@
-
+.gap{
+  display: flex;
+  flex-direction: column;
+gap: 5px;
+}
+ 
 .title{
   padding-left: 1%;
+  text-align: center;
 }
-
-.line{
-  padding-left: 1%;
-  display: flex;
-  gap: 1%;
+.description{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: lightgray;
+  padding-inline: 3%;
 }
-.columnNews{
-  display: flex;
-  flex-direction: column;
-  column-gap: 10%;
-  gap: 5vh;
-}
-.columnContent{
-  display: flex;
-  flex-direction: column;
-}
-
-.titleNews{
-  cursor: pointer;
+.departments{
+  padding-top: 5%;
+  padding-bottom: 2%;
 }
