@@ -2,8 +2,6 @@
 
 import styles from './styles.module.css'
 import Image from 'next/image'
-import rocket from '/public/rocket.jpeg'
-// TODO: Change this to be received in argument
 import { useRouter } from 'next/navigation'
 
 interface ImageWTextProps {

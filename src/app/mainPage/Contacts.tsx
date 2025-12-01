@@ -5,7 +5,8 @@ import styles from "./Contacts.styles.module.css";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
-import contactUs from '/public/Contact.png'
+//import contactUs from '/public/Contact.png'
+import contactUs from '/public/Contact.jpg'
 import { useRouter } from 'next/navigation'
 
 export default function Contacts() {
@@ -18,14 +19,11 @@ export default function Contacts() {
                 <Image
                     src={contactUs}
                     alt="Contact us"
-                    width={600}
+                    width={500}
                     height={400}
                     className={styles.imgContactUs}
                 />
                 <div className={styles.contactsColumn}>
-                    <div>
-                        Phone<br />912 594 206
-                    </div>
                     <div>
                         Mail<br />taurusspaceprojects@gmail.com
                     </div>

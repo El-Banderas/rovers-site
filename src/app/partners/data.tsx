@@ -1,12 +1,14 @@
 
-import FADJP from '/public/partners/FADJP.png'
+import FAJDP from '/public/partners/FADJP.png'
 import NEEEICUM from '/public/partners/neeeicum.png'
 import MESCC from '/public/partners/MESCC.jpg'
 import N_EC from '/public/partners/N3EC.jpeg'
+// import IEEE from '/public/partners/IEEE_UM_Blue.png'
+import IEEE from '/public/partners/IEEE_UM_Black.png'
 
 import Mauser from '/public/sponsors/Mauser.png'
 import Norelem from '/public/sponsors/Norelem.png'
-import PORMECALU from '/public/sponsors/PORMECALU.png'
+import PORMECALU from '/public/sponsors/PORMECALU.jpeg'
 
 const type = new Set<string>(['partners', 'sponsors']);
 
@@ -18,9 +20,9 @@ export interface Partner {
 const url = "https://www.google.com"
 export const partners: Partner[] = [
     {
-        "name": "FADJP",
+        "name": "FAJDP",
         "url": "https://fajdp.pt/",
-        "image": FADJP
+        "image": FAJDP,
     },
     {
         "name": "NEEEICUM",
@@ -36,6 +38,11 @@ export const partners: Partner[] = [
         "name": "N3EC",
         "url": "https://n3ec.dee.isep.ipp.pt/",
         "image": N_EC,
+    },
+    {
+        "name": "IEEE",
+        "url": "https://um.ieee-pt.org/",
+        "image": IEEE,
     },
 ]
 
@@ -69,14 +76,4 @@ export const sponsors: { [level: string]: SponsorInfo } = {
             "image": PORMECALU
         },
     ]},
-    "bronze": {
-        color: "orange",
-        partners: [
-        {
-            "name": "S4",
-            "url": url,
-            "image": NEEEICUM
-        },
-
-    ]}
 }

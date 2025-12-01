@@ -15,7 +15,7 @@ export default function Page() {
   }
   return <div className={styles.content}>
     <h1 className={styles.title}>
-      Our ?Amazing? Supporters
+      Our Amazing Supporters
     </h1>
     <div className={styles.toggle}>
       {["Partners", "Sponsors"].map(thisOption =>

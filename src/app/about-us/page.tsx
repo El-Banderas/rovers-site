@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main  >
 
-      <ImageWText image={firstImg} title="About us" description="Meet our incredible team" />
+      <ImageWText image={firstImg} title="Who are we?" description="Meet our incredible team" />
       <TextPart />
       <SelectDpt />
 
