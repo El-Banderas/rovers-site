@@ -4,7 +4,6 @@ ul.myList {
   justify-content: center;
   margin: 20px;
   padding: 0px;
-  width: 100%;
   gap: 4px;
 }
 
@@ -13,7 +12,6 @@ ul.myList li {
   position: relative;
   display: inline;
   background-color: black;
-  width: max-content;
 }
 
 ul.myList li a {
@@ -54,4 +52,13 @@ ul.myList li a:hover {
 ul.myList li.underlined:after {
   width: 100%;
   left: 0;
+}
+
+@media (max-width: 768px),
+  (max-height: 500px) {
+  ul.myList {
+    flex-direction: column;
+    text-align: center;
+  }
+
 }
