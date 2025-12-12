@@ -14,7 +14,7 @@ export default function Contacts() {
   const router = useRouter()
     return (<div className={styles.contacts}>
         <div className={styles.content}>
-            <h1>Do you have any questions?<br />Contact us</h1>
+            <h2>Do you have any questions?<br />Contact us</h2>
             <div className={styles.flexHorizontal}>
                 <Image
                     src={contactUs}

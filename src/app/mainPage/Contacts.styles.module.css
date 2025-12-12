@@ -5,38 +5,46 @@
     color: whitesmoke;
 }
 
-.content{
+.content {
 
- display: flex;
- justify-content: flex-start;
- flex-direction: column;
- margin-left: 5%;
- margin-right: 5%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
 
 }
 
-.flexHorizontal{
+.flexHorizontal {
 
- display: flex;
- flex-direction: row;
- gap: 3%;
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
 }
 
-.contactsColumn{
- display: flex;
- flex-direction: column;
- justify-content: flex-end;
- gap: 3%;
-margin-bottom: 3%;
+.contactsColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3%;
+    margin-bottom: 3%;
 }
-.imgContactUs{
+
+.imgContactUs {
     width: 30%;
     height: auto;
 
 }
-@media (max-width: 768px), (max-height: 500px) { 
-            .imgContactUs { 
-                height: 10vh;
-                width: auto;
-            }
-            }
+
+@media (max-width: 768px),
+(max-height: 500px) {
+    .imgContactUs {
+        max-width: 35vw;
+    }
+
+    .contactsColumn {
+        max-width: 45vw;
+        word-wrap: break-word; 
+        word-break: break-all;
+    }
+}
