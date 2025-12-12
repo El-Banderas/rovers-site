@@ -16,7 +16,6 @@
 }
 
 .flexHorizontal {
-
     display: flex;
     flex-direction: row;
     gap: 3%;
@@ -26,25 +25,40 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 3%;
+    gap: 5%;
     margin-bottom: 3%;
 }
 
 .imgContactUs {
-    width: 30%;
+    width: 20%;
     height: auto;
 
 }
 
+.mailAdress {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
 @media (max-width: 768px),
 (max-height: 500px) {
+    .contacts {
+        padding-bottom: 5%;
+    }
+
     .imgContactUs {
-        max-width: 35vw;
+        width: 40%;
     }
 
     .contactsColumn {
         max-width: 45vw;
-        word-wrap: break-word; 
-        word-break: break-all;
     }
+
+    .mailAdress {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

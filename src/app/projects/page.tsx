@@ -17,12 +17,14 @@ export default function Page() {
   }
 
   const department = useMemo(() => (departments[selectedDpt]), [selectedDpt]);
-  return <div>
+  return <div >
     <h1 className={styles.title} >Current Project</h1>
     <Images />
     <div className={styles.departments}>
     <h4 className={styles.description}>{description}</h4>
-   <RowBtns departmentsTitles={departmentsTitles} selectedDPT={selectedDpt} selectDPT={selectDPT} />
+    <div className={styles.btns}>
+   <RowBtns  departmentsTitles={departmentsTitles} selectedDPT={selectedDpt} selectDPT={selectDPT} />
+</div>
     </div>
     <Department department={departments[selectedDpt]}/>
 

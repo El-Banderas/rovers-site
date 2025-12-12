@@ -1,14 +1,16 @@
-.gap{
+.gap {
   display: flex;
   flex-direction: column;
-gap: 5px;
+  gap: 5px;
+  padding-bottom: 5%;
 }
- 
-.title{
+
+.title {
   padding-left: 1%;
   text-align: center;
 }
-.description{
+
+.description {
   width: 50%;
   margin: auto;
   margin-bottom: 5%;
@@ -17,7 +19,21 @@ gap: 5px;
   background-color: lightgray;
   padding-inline: 3%;
 }
-.departments{
+
+.departments {
   padding-top: 5%;
   padding-bottom: 2%;
+}
+
+@media (max-width: 768px),
+(max-height: 500px) {
+  .description {
+    width: 70%;
+  }
+
+  .btns {
+    width: 80%;
+    margin: 0 auto;
+  }
+
 }

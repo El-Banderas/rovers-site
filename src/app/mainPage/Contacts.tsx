@@ -25,9 +25,13 @@ export default function Contacts() {
                 />
                 <div className={styles.contactsColumn}>
                     <div>
-                        Mail<br />taurusspaceprojects@gmail.com
+                        Mail<br />
+                        <div className={styles.mailAdress}>
+                            <div>
+                            taurusspaceprojects</div><div>@gmail.com</div>
+                        </div>
                     </div>
-                    <div></div>
+                    <div>
                     <div>Social</div>
 
                     <div className={styles.flexHorizontal}>
@@ -36,6 +40,7 @@ export default function Contacts() {
                         </div>
                         <div onClick={() => router.push("/linkedin")} style={{cursor: 'pointer'}}>
                             <InstagramIcon />
+                        </div>
                         </div>
                     </div>
                 </div>
