@@ -13,14 +13,17 @@ export default function Footer() {
 
   return (
     <div className={styles.footer}>
-      <Image
+      <div className={styles.centerLogo}>
+<Image
             src={whiteLogo}
             alt="Logo"
             width={700}
             height={500}
             className={styles.imgWhiteLogo}
           />
-      <div className={styles.aboveHorizontalLine}>
+
+      </div>
+            <div className={styles.aboveHorizontalLine}>
           
 
         <div className={styles.verticalFlex}>

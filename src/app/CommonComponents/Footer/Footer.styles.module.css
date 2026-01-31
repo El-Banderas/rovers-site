@@ -1,56 +1,60 @@
-
-
 .footer {
     padding-top: 5%;
     background-color: black;
     color: white;
     padding-left: 2%;
-padding-right: 5%;
+    padding-right: 5%;
 }
-
 .imgWhiteLogo {
     width: 8vh;
     height: auto;
 }
-.horizontalFlex{
+
+.horizontalFlex {
     display: flex;
     flex-direction: row;
-gap: 5%;
+    gap: 5%;
 }
-.aboveHorizontalLine{
+
+.aboveHorizontalLine {
     display: flex;
     flex-direction: row;
-gap: 5%;
-justify-content: space-between;
-margin-bottom: 2%;
+    gap: 5%;
+    justify-content: space-between;
+    margin-bottom: 2%;
 }
-.verticalFlex{
+
+.verticalFlex {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
 }
-.verticalFlexCenter{
+
+.verticalFlexCenter {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     align-items: center;
 }
-.verticalFlexRight{
+
+.verticalFlexRight {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     align-items: flex-end;
 }
-.lessVerticalPadding{
+
+.lessVerticalPadding {
     margin-top: 0px;
     margin-bottom: 5%;
 }
 
-.othersLinks{
+.othersLinks {
     margin-bottom: 0px;
 }
-.othersLinks:hover{
-cursor: pointer;
+
+.othersLinks:hover {
+    cursor: pointer;
 }
 
 .hr {
@@ -61,13 +65,13 @@ cursor: pointer;
     padding: 0;
 }
 
-.copyright{
-     margin: auto;
-     margin-top: 2%;
-  width: 50%;
-  text-align: center;
-  font-size: medium;
-  padding-bottom: 3%;
+.copyright {
+    margin: auto;
+    margin-top: 2%;
+    width: 50%;
+    text-align: center;
+    font-size: medium;
+    padding-bottom: 3%;
 }
 
 @media (max-width:1025px) {
@@ -75,12 +79,13 @@ cursor: pointer;
         height: 5vh;
         width: 5vh;
     }
-.aboveHorizontalLine{
-    display: flex;
-    flex-direction: column;
-gap: 5%;
-}
-.copyright{
-  font-size: medium;
-}
+
+    .aboveHorizontalLine {
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+    }
+    .copyright {
+        font-size: medium;
+    }
 }

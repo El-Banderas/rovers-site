@@ -45,6 +45,9 @@
 
 @media (max-width: 768px),
 (max-height: 500px) {
+    .text{
+        width: 100%;
+    }
     .imgAboutUs {
         height: 25vh;
         width: auto;

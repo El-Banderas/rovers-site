@@ -11,11 +11,11 @@ import { useRouter } from 'next/navigation'
 
 export default function Contacts() {
 
-  const router = useRouter()
+    const router = useRouter()
     return (<div className={styles.contacts}>
         <div className={styles.content}>
             <h2>Do you have any questions?<br />Contact us</h2>
-            <div className={styles.flexHorizontal}>
+            <div className={styles.imageWContacts}>
                 <Image
                     src={contactUs}
                     alt="Contact us"
@@ -28,19 +28,19 @@ export default function Contacts() {
                         Mail<br />
                         <div className={styles.mailAdress}>
                             <div>
-                            taurusspaceprojects</div><div>@gmail.com</div>
+                                taurusspaceprojects</div><div>@gmail.com</div>
                         </div>
                     </div>
                     <div>
-                    <div>Social</div>
+                        <div>Social</div>
 
-                    <div className={styles.flexHorizontal}>
-                        <div onClick={() => router.push("/instagram")} style={{cursor: 'pointer'}}>
-                            <LinkedInIcon />
-                        </div>
-                        <div onClick={() => router.push("/linkedin")} style={{cursor: 'pointer'}}>
-                            <InstagramIcon />
-                        </div>
+                        <div className={styles.flexHorizontal}>
+                            <div onClick={() => router.push("/instagram")} style={{ cursor: 'pointer' }}>
+                                <LinkedInIcon />
+                            </div>
+                            <div onClick={() => router.push("/linkedin")} style={{ cursor: 'pointer' }}>
+                                <InstagramIcon />
+                            </div>
                         </div>
                     </div>
                 </div>
