@@ -13,7 +13,6 @@ export default function Footer() {
 
   return (
     <div className={styles.footer}>
-      <div className={styles.centerLogo}>
 <Image
             src={whiteLogo}
             alt="Logo"
@@ -21,8 +20,6 @@ export default function Footer() {
             height={500}
             className={styles.imgWhiteLogo}
           />
-
-      </div>
             <div className={styles.aboveHorizontalLine}>
           
 
