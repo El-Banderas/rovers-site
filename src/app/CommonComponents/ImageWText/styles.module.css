@@ -7,22 +7,24 @@
     height: auto;
 }
 
-
-.title {
+.text {
     position: absolute;
     top: 50%;
     bottom: 50%;
     left: 5%;
     color: white;
+    display: flex;
+    flex-direction: column;
+align-content: flex-start;
+}
+.title {
     font-size: 4.0rem;
+    margin-bottom: 0px;
 }
 
 .description {
-    position: absolute;
-    top: 60%;
-    bottom: 40%;
-    left: 5%;
-    color: white;
+    font-size: 1.5rem;
+    margin-top: 0px;
 }
 @media (max-width: 768px),
 (max-height: 500px) {
@@ -32,11 +34,9 @@
     }
 
     .title {
-        position: absolute;
-        top: 50%;
-        bottom: 50%;
-        left: 5%;
-        color: white;
         font-size: 1.3rem;
     }
+.description {
+    font-size: 0.9rem;
+}
 }

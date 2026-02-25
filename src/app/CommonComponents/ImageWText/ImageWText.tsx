@@ -18,7 +18,9 @@ export default function ImageWText ({ image, title, description }: ImageWTextPro
               className={styles.vercelLogo}
               priority
             />
+            <div className={styles.text}>
   <h1 className={styles.title}>{title}</h1>
   <h4 className={styles.description}>{description}</h4>
+</div>
 </div>;
 }
