@@ -3,7 +3,6 @@ import MyButton from "../CommonComponents/MyButton/MyButton";
 import styles from "./AboutUs.styles.module.css";
 import Image from "next/image";
 
-import abousUsImg from '/public/aboutUsIMG.jpg'
 import { useRouter } from 'next/navigation'
 
 export default function AboutUs() {
@@ -28,12 +27,6 @@ In other words: we are <strong>UNIQUE</strong>!
       </div>
       </div>
       </div>
-      <Image
-        src={abousUsImg}
-        alt="About us img"
-        width={500}
-        height={500}
-        className={styles.imgAboutUs}
-      />
+     
   </div>;
 }
